@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>ĀtmaSoul | Dr. Neeraj Gupta — Healing from Within</title>
-  <!-- Google Fonts: Elegant pair -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Dr. Neeraj Gupta · Spiritual Healing & Inner Transformation · Jammu</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+    /* ----- DESIGN SYSTEM: SERENE BLUE + GOLD (spiritual healing) ----- */
     * {
       margin: 0;
       padding: 0;
@@ -15,523 +18,664 @@
     }
 
     :root {
-      --bg-deep: #07090f;
-      --bg-card: rgba(12, 15, 24, 0.65);
-      --ivory: #f7f2e7;
-      --gold: #d9b650;
-      --gold-light: #e9c87c;
-      --rose: #df9a7a;
-      --shadow-gold: rgba(217, 182, 80, 0.2);
-      --border-gold: rgba(217, 182, 80, 0.3);
-      --transition-smooth: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    }
-
-    body {
-      background-color: var(--bg-deep);
-      color: var(--ivory);
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-      line-height: 1.5;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(circle at 20% 30%, rgba(217, 182, 80, 0.03) 0%, transparent 50%),
-                        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
+      --primary: #2c5282;        /* deep indigo */
+      --primary-dark: #1a365d;   /* navy */
+      --primary-light: #e6f0ff;   /* soft blue */
+      --accent: #e6b422;          /* warm gold */
+      --neutral-900: #1e293b;
+      --neutral-500: #475569;
+      --neutral-100: #f8fafc;
+      --white: #ffffff;
+      --shadow-card: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+      --shadow-hover: 0 20px 30px -10px rgba(44,82,130,0.2);
+      --border-radius-card: 16px;
+      --border-radius-pill: 9999px;
+      --container-max: 1280px;
+      --section-pad: 80px;
+      --section-pad-mobile: 48px;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 2rem;
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--neutral-900);
+      background: var(--white);
+      line-height: 1.5;
+      padding-bottom: 80px; /* space for fixed bottom buttons */
     }
 
-    /* Buttons refined */
+    h1, h2, h3, .display-font {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-padding {
+      padding: var(--section-pad) 0;
+    }
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: var(--section-pad-mobile) 0;
+      }
+    }
+
     .btn-primary {
-      background: linear-gradient(105deg, var(--gold) 0%, var(--rose) 100%);
-      border: none;
-      color: #0a0c14;
+      background: var(--primary);
+      color: var(--white);
       font-weight: 600;
-      padding: 0.9rem 2rem;
-      border-radius: 3rem;
-      transition: var(--transition-smooth);
-      box-shadow: 0 8px 20px rgba(217, 182, 80, 0.2);
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: var(--border-radius-pill);
+      border: none;
       cursor: pointer;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
-      letter-spacing: 0.3px;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      line-height: 1;
+      box-shadow: 0 4px 6px -2px rgba(44,82,130,0.3);
     }
-
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 28px rgba(217, 182, 80, 0.3);
-      background: linear-gradient(105deg, #e6c265 0%, #e9ac8f 100%);
+      background: var(--primary-dark);
+      transform: scale(1.02);
     }
 
     .btn-outline {
       background: transparent;
-      border: 1.5px solid var(--gold);
-      color: var(--gold);
-      padding: 0.85rem 1.9rem;
-      border-radius: 3rem;
-      font-weight: 500;
-      transition: var(--transition-smooth);
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-    }
-
-    .btn-outline:hover {
-      background: rgba(217, 182, 80, 0.12);
-      transform: translateY(-2px);
-      border-color: var(--gold-light);
-      color: var(--gold-light);
-    }
-
-    /* Fixed action buttons */
-    .fixed-buttons {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .btn-call, .btn-wa {
-      padding: 14px 24px;
-      border-radius: 60px;
+      border: 2px solid var(--primary);
+      color: var(--primary);
       font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 12px 28px;
+      border-radius: var(--border-radius-pill);
       text-decoration: none;
-      font-size: 1rem;
-      backdrop-filter: blur(4px);
+      transition: 0.2s;
     }
-    .btn-call { background: #dc2626; color: white; border: 1px solid rgba(255,255,255,0.2); }
-    .btn-wa { background: #25D366; color: white; border: 1px solid rgba(255,255,255,0.2); }
-    .btn-call:hover, .btn-wa:hover { transform: scale(1.05); box-shadow: 0 12px 24px rgba(0,0,0,0.4); }
-
-    /* Premium card */
-    .premium-card {
-      background: rgba(12, 15, 24, 0.6);
-      backdrop-filter: blur(12px);
-      border-radius: 2rem;
-      border: 1px solid rgba(217, 182, 80, 0.2);
-      transition: var(--transition-smooth);
-      padding: 2rem;
-    }
-    .premium-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 20px 35px -15px rgba(217, 182, 80, 0.2);
-      transform: translateY(-6px);
+    .btn-outline:hover {
+      background: var(--primary-light);
     }
 
-    /* Hero starfield */
-    .hero-starfield {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-      z-index: 0;
+    .card {
+      background: var(--white);
+      border-radius: var(--border-radius-card);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.3s;
     }
-    .star {
-      position: absolute;
-      background: radial-gradient(circle, rgba(245,239,224,0.9) 0%, rgba(217,182,80,0.4) 100%);
-      border-radius: 50%;
-      animation: twinkle 2.5s infinite alternate;
-    }
-    @keyframes twinkle {
-      0% { opacity: 0.2; transform: scale(1);}
-      100% { opacity: 1; transform: scale(1.2);}
-    }
-    .floating-orb {
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle, rgba(217,182,80,0.18) 0%, rgba(223,154,122,0.08) 70%);
-      border-radius: 50%;
-      filter: blur(70px);
-      animation: floatPulse 12s infinite alternate;
-      pointer-events: none;
-    }
-    @keyframes floatPulse {
-      0% { opacity: 0.3; transform: translate(0, 0) scale(1);}
-      100% { opacity: 0.7; transform: translate(40px, -40px) scale(1.3);}
+    .card:hover {
+      box-shadow: var(--shadow-hover);
     }
 
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      line-height: 1.2;
-    }
-    .section-sub {
-      font-family: 'Cinzel', serif;
-      font-size: 0.8rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
+    .badge {
+      background: var(--accent);
+      color: var(--neutral-900);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
       display: inline-block;
     }
 
-    /* Testimonial & FAQ items */
-    .testimonial-card, .faq-item {
-      background: rgba(12, 15, 24, 0.55);
-      backdrop-filter: blur(8px);
-      border-radius: 1.8rem;
-      padding: 1.8rem;
-      border-left: 3px solid var(--gold);
-      transition: 0.2s;
+    /* ----- FIXED BOTTOM BUTTONS (CALL & WHATSAPP) ----- */
+    .fixed-bottom-buttons {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+      padding: 0 16px;
     }
-    .faq-item:hover {
-      background: rgba(12, 15, 24, 0.75);
-      border-left-width: 4px;
+    .btn-call {
+      background-color: #dc2626; /* red */
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-wa {
+      background-color: #25D366; /* WhatsApp green */
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-call:hover, .btn-wa:hover {
+      transform: scale(1.03);
+    }
+    @media (max-width: 480px) {
+      .btn-call, .btn-wa { padding: 10px 20px; font-size: 0.9rem; }
+      .fixed-bottom-buttons { gap: 12px; bottom: 16px; }
     }
 
-    /* Modal premium */
-    .modal-overlay {
+    /* navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      z-index: 50;
+      padding: 16px 24px;
+    }
+    .nav-container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--neutral-900);
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .mobile-menu {
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(12px);
-      z-index: 2000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 0.2s, opacity 0.2s;
+      height: 100vh;
+      background: white;
+      z-index: 100;
+      padding: 40px 24px;
+      flex-direction: column;
+      gap: 24px;
     }
-    .modal-overlay.active {
-      visibility: visible;
-      opacity: 1;
+    .mobile-menu a {
+      font-size: 24px;
+      text-decoration: none;
+      color: var(--neutral-900);
     }
-    .modal-container {
-      background: rgba(8, 10, 18, 0.95);
-      backdrop-filter: blur(20px);
-      border-radius: 2rem;
-      max-width: 480px;
-      width: 90%;
-      padding: 2.2rem;
-      border: 1px solid var(--gold);
-      box-shadow: 0 30px 50px rgba(0,0,0,0.5);
-      text-align: center;
+    .close-menu {
+      align-self: flex-end;
+      font-size: 32px;
+      cursor: pointer;
     }
-    .modal-container input {
-      width: 100%;
-      padding: 14px 18px;
-      margin: 12px 0;
-      background: #11141f;
-      border: 1px solid rgba(217,182,80,0.4);
-      border-radius: 60px;
-      color: #f7f2e7;
-      font-size: 1rem;
-      transition: 0.2s;
-    }
-    .modal-container input:focus {
-      border-color: var(--gold);
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(217,182,80,0.3);
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: block; }
     }
 
-    /* map styling */
-    .map-premium {
-      border-radius: 2rem;
-      overflow: hidden;
-      border: 1px solid rgba(217,182,80,0.4);
-      box-shadow: 0 15px 30px -10px rgba(0,0,0,0.4);
+    /* grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
     }
-    iframe {
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: 1fr; }
+    }
+
+    img.placeholder-img {
       width: 100%;
-      height: 360px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* map */
+    .map-container {
+      width: 100%;
+      height: 380px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      margin: 40px 0 20px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .business-address {
+      background: var(--primary-light);
+      padding: 20px 28px;
+      border-radius: 60px;
+      display: inline-block;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    /* FAQ */
+    .faq-question {
+      background: var(--neutral-100);
+      padding: 18px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      padding: 0 24px 18px 24px;
+      color: var(--neutral-500);
+      display: none;
+    }
+    .faq-item.active .faq-answer {
       display: block;
     }
 
-    /* Dr. Neeraj story section */
-    .story-card {
-      background: linear-gradient(135deg, rgba(12,15,24,0.7) 0%, rgba(8,10,18,0.85) 100%);
-      backdrop-filter: blur(8px);
-      border-radius: 2rem;
-      padding: 2.5rem;
-      border: 1px solid rgba(217,182,80,0.3);
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.4);
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
     }
-
-    @media (max-width: 768px) {
-      .container { padding: 0 1.5rem; }
-      .section-title { font-size: 2.5rem; }
-      .fixed-buttons { bottom: 20px; right: 20px; gap: 10px; }
-      .btn-call, .btn-wa { padding: 10px 18px; font-size: 0.85rem; }
-      .story-card { padding: 1.8rem; }
+    .modal-card {
+      background: white;
+      max-width: 450px;
+      width: 90%;
+      padding: 40px 30px;
+      border-radius: 32px;
+      position: relative;
+      text-align: center;
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .modal-card input {
+      width: 100%;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      font-size: 1rem;
+    }
+    .contact-icon-row {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    .contact-icon-row a {
+      text-decoration: none;
+      color: var(--primary-dark);
+      background: #eef2ff;
+      padding: 8px 20px;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .timing-badge {
+      background: white;
+      padding: 6px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 10px;
+      border: 1px solid var(--primary-light);
     }
   </style>
 </head>
 <body>
 
-<!-- Fixed Action Buttons (Call + WhatsApp) -->
-<div class="fixed-buttons">
-  <a href="tel:+917780814739" class="btn-call"><i class="fas fa-phone-alt"></i> Call Now</a>
-  <a href="https://wa.me/917780814739?text=Hello%20I%20seek%20spiritual%20guidance" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+<!-- FIXED BOTTOM BUTTONS: CALL NOW & WHATSAPP NOW (always visible) -->
+<div class="fixed-bottom-buttons">
+  <button class="btn-call" onclick="window.location.href='tel:+917780814739'">
+    <i class="fas fa-phone-alt"></i> Call Now
+  </button>
+  <button class="btn-wa" onclick="window.open('https://wa.me/917780814739','_blank')">
+    <i class="fab fa-whatsapp"></i> WhatsApp Now
+  </button>
 </div>
 
-<!-- Hero Section (no navbar) -->
-<section id="home" class="relative overflow-hidden pt-24 pb-28 md:pt-32 md:pb-40" style="background: radial-gradient(ellipse at 30% 40%, #0A0C16, #03050A);">
-  <div class="hero-starfield" id="starfieldContainer"></div>
-  <div class="floating-orb top-10 left-10"></div>
-  <div class="floating-orb bottom-20 right-0 w-96 h-96" style="animation-delay: -3s;"></div>
-  <div class="container relative z-10 text-center md:text-left md:flex md:justify-between md:items-center gap-12">
-    <div class="md:w-3/5">
-      <span class="section-sub">Eternal Wisdom · Sacred Path</span>
-      <h1 class="text-5xl md:text-7xl font-bold leading-tight" style="font-family: 'Cormorant Garamond', serif;">Awaken the <br><span style="color: var(--gold);">Light Within</span></h1>
-      <p class="text-xl md:text-2xl mt-6 text-[#E8DFCF] max-w-xl leading-relaxed">Sacred guidance, energy alchemy & soul-led transformation. Begin your path to inner radiance.</p>
-      <div class="flex flex-wrap gap-5 mt-10 justify-center md:justify-start">
-        <button class="btn-primary modal-trigger-btn" data-modal="mainModal"><i class="fas fa-moon"></i> Register Yourself</button>
-        <!-- "Ask a Question" button removed -->
-      </div>
-    </div>
-    <div class="mt-12 md:mt-0 md:w-2/5 flex justify-center">
-      <div class="w-72 h-72 rounded-full bg-gradient-to-tr from-[#D9B650]/30 to-[#DF9A7A]/20 backdrop-blur-xl flex items-center justify-center border border-[#D9B650]/60 shadow-2xl">
-        <i class="fas fa-lotus fa-5x" style="color: #D9B650; opacity: 0.9;"></i>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Social Proof refined -->
-<div class="border-y border-[#D9B650]/20 py-4 bg-black/30 backdrop-blur-sm">
-  <div class="container flex flex-wrap justify-center md:justify-between items-center gap-5 text-center">
-    <div class="flex items-center gap-2"><i class="fas fa-user-friends text-[#D9B650] text-xl"></i><span class="font-semibold">5,000+ souls transformed</span></div>
-    <div class="flex items-center gap-2"><i class="fas fa-star text-[#D9B650]"></i><i class="fas fa-star text-[#D9B650]"></i><i class="fas fa-star text-[#D9B650]"></i><i class="fas fa-star text-[#D9B650]"></i><i class="fas fa-star text-[#D9B650]"></i><span class="ml-2">4.98/5 (1.2k reviews)</span></div>
-    <div class="flex items-center gap-2"><i class="fas fa-medal text-[#D9B650]"></i><span>Certified Master Coach & Healer</span></div>
-  </div>
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="close-menu" onclick="toggleMenu()">✕</div>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#programs" onclick="toggleMenu()">Offerings</a>
+  <a href="#reviews" onclick="toggleMenu()">Stories</a>
+  <a href="#contact" onclick="toggleMenu()">Connect</a>
+  <button class="btn-primary open-booking-modal" style="margin-top:20px; width:100%;">✨ Begin Healing</button>
 </div>
 
-<!-- About Section (Anjali Devi) kept but slightly reduced -->
-<section id="about" class="py-28">
-  <div class="container grid md:grid-cols-2 gap-14 items-center">
-    <div>
-      <span class="section-sub">Divine Channel</span>
-      <h2 class="section-title">Anjali Devi — <br>Spiritual Mentor & Healer</h2>
-      <p class="text-[#E8DFCF] leading-relaxed mt-5 text-lg">For over 12 years, I've walked the path of meditation, chakra alignment, and shadow integration. My calling is to help you uncover your soul’s blueprint and embody true authenticity. Certified in Reiki Mastery, Vedic Astrology & Trauma-Informed Mindfulness.</p>
-      <div class="grid grid-cols-2 gap-4 mt-7">
-        <div><i class="fas fa-check-circle text-[#D9B650]"></i> 10,000+ Mentorship hours</div>
-        <div><i class="fas fa-check-circle text-[#D9B650]"></i> Yoga Alliance E-RYT 500</div>
-        <div><i class="fas fa-check-circle text-[#D9B650]"></i> Intuitive Astrologer</div>
-        <div><i class="fas fa-check-circle text-[#D9B650]"></i> Trauma-informed Coach</div>
-      </div>
-      <button class="btn-primary mt-10 modal-trigger-btn" data-modal="mainModal"><i class="fas fa-calendar-alt"></i> Book Discovery Call</button>
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div style="font-family: 'Playfair Display'; font-size: 1.8rem; font-weight: 700; color: var(--primary-dark);">Dr. Neeraj <span style="color:var(--accent);">Gupta</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#programs">Offerings</a>
+      <a href="#reviews">Stories</a>
+      <a href="#contact">Connect</a>
     </div>
-    <div class="flex justify-center">
-      <div class="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl border border-[#D9B650]/50 transform transition hover:scale-[1.02]">
-        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format" alt="Anjali Devi meditation" class="w-full h-full object-cover">
+    <div class="nav-cta">
+      <button class="btn-primary open-booking-modal" style="border:none; padding:10px 24px;">Free Discovery Call</button>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☯</div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section style="position: relative; background: #1e2a3a; min-height: 75vh; display: flex; align-items: center; color: white;">
+  <div style="position: absolute; inset:0; background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070&auto=format'); background-size: cover; background-position: center; opacity: 0.4;"></div>
+  <div style="position: absolute; inset:0; background: linear-gradient(135deg, rgba(26,54,93,0.8), rgba(230,180,34,0.3));"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div style="max-width: 700px;">
+      <h1 style="font-size: clamp(2.5rem, 7vw, 4rem);">Heal from Within<br>Awaken Your True Self</h1>
+      <p style="font-size: 1.4rem; margin: 24px 0; opacity: 0.9;">Dr. Neeraj Gupta — Spiritual Mentor, Mindfulness Guide, Healer. Jammu & Online</p>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <button class="btn-primary open-booking-modal" style="font-size: 1.1rem; padding: 14px 32px;">🌿 Free Discovery Call</button>
+        <a href="#programs" style="color: white; font-weight: 500; text-decoration: underline;">Explore offerings</a>
+      </div>
+      <div style="margin-top: 40px;"><span style="color: var(--accent);">★★★★★</span> <span>Trusted by 1,500+ seekers</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS / OFFERINGS SECTION (4 cards) -->
+<section id="programs" class="section-padding" style="background: var(--neutral-100); scroll-margin-top: 80px;">
+  <div class="container">
+    <h2 style="font-size: 2.5rem; margin-bottom: 48px;">Spiritual offerings for deep healing</h2>
+    <div class="grid-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&auto=format" class="placeholder-img" alt="meditation">
+        <div style="margin-top: 16px;"><span class="badge">Mindfulness</span></div>
+        <h3 style="margin: 12px 0 4px;">Guided Meditation</h3>
+        <p>Calm the mind, reduce anxiety, connect to inner stillness.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format" class="placeholder-img" alt="spiritual mentorship">
+        <div style="margin-top: 16px;"><span class="badge">Mentorship</span></div>
+        <h3 style="margin: 12px 0 4px;">1:1 Spiritual Mentorship</h3>
+        <p>Personalised guidance to dissolve suffering & discover purpose.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&auto=format" class="placeholder-img" alt="energy healing">
+        <div style="margin-top: 16px;"><span class="badge">Healing</span></div>
+        <h3 style="margin: 12px 0 4px;">Energy & Inner Child Work</h3>
+        <p>Release deep-rooted blocks, restore emotional balance.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&auto=format" class="placeholder-img" alt="cosmic consciousness">
+        <div style="margin-top: 16px;"><span class="badge">Awakening</span></div>
+        <h3 style="margin: 12px 0 4px;">Cosmic Consciousness</h3>
+        <p>Ancient wisdom + modern psychology for holistic transformation.</p>
+      </div>
+    </div>
+    <!-- additional CTA inside offerings section (different way) -->
+    <div style="text-align: center; margin-top: 50px;">
+      <button class="btn-primary open-booking-modal-2" style="background: var(--accent); color: #1e293b;">✨ Book Your First Healing Session (Free)</button>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS SECTION: Indian people from specific cities -->
+<section id="reviews" class="section-padding" style="background: white;" scroll-margin-top="70px">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
+      <h2 style="font-size: 2.5rem;">Hearts that healed</h2>
+      <span style="background: var(--primary-light); padding: 8px 20px; border-radius: 40px;">⭐ 4.9/5 · 320+ stories</span>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span style="color: var(--accent);">★★★★★</span>
+        <p style="margin: 16px 0;">"Dr. Neeraj’s mentorship helped me overcome years of anxiety. I finally feel at peace."</p>
+        <div><span style="font-weight: 600;">Anjali Sharma</span> · Jammu City</div>
+      </div>
+      <div class="card">
+        <span style="color: var(--accent);">★★★★★</span>
+        <p style="margin: 16px 0;">"His meditation techniques are life-changing. I now handle stress with grace."</p>
+        <div><span style="font-weight: 600;">Rohan Gupta</span> · Gandhi Nagar, Jammu</div>
+      </div>
+      <div class="card">
+        <span style="color: var(--accent);">★★★★★</span>
+        <p style="margin: 16px 0;">"I came feeling lost; now I’m connected to my higher self. Truly grateful."</p>
+        <div><span style="font-weight: 600;">Priya Kapoor</span> · Greater Kailash, Delhi</div>
+      </div>
+      <div class="card">
+        <span style="color: var(--accent);">★★★★★</span>
+        <p style="margin: 16px 0;">"The energy healing sessions dissolved my past trauma. Highly recommend."</p>
+        <div><span style="font-weight: 600;">Vikram Singh</span> · Chandigarh</div>
+      </div>
+      <div class="card">
+        <span style="color: var(--accent);">★★★★★</span>
+        <p style="margin: 16px 0;">"Dr. Neeraj’s blend of modern psychology & spirituality is unique. Felt understood."</p>
+        <div><span style="font-weight: 600;">Neha Patil</span> · Pune</div>
+      </div>
+      <div class="card">
+        <span style="color: var(--accent);">★★★★★</span>
+        <p style="margin: 16px 0;">"Mindfulness sessions brought clarity to my life. Forever thankful."</p>
+        <div><span style="font-weight: 600;">Suresh Raina</span> · Gandhi Nagar, Jammu</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Offerings / Services (Only 1:1 Sessions, removed courses/shop/pricing) -->
-<section id="offerings" class="py-28 bg-gradient-to-b from-[#07090F] to-[#0B0E18]">
+<!-- DR. NEERAJ SECTION: image + detailed bio (exactly as provided) -->
+<section id="about" class="section-padding" style="background: var(--primary-light); scroll-margin-top: 70px;">
   <div class="container">
-    <div class="text-center max-w-2xl mx-auto">
-      <span class="section-sub">Sacred Pathways</span>
-      <h2 class="section-title">Transformational offerings</h2>
-    </div>
-    <div class="grid md:grid-cols-1 max-w-2xl mx-auto gap-8 mt-16">
-      <!-- Only 1:1 Session card, no pricing -->
-      <div class="premium-card text-center">
-        <div class="w-20 h-20 mx-auto bg-gradient-to-br from-[#D9B650]/20 to-[#DF9A7A]/20 rounded-full flex items-center justify-center mb-5"><i class="fas fa-hand-sparkles text-4xl text-[#D9B650]"></i></div>
-        <h3 class="text-2xl font-bold mb-2 font-serif">1:1 Spiritual Mentoring</h3>
-        <p class="text-[#E8DFCF]/80">Personalized energy healing, akashic guidance & spiritual mentoring — deep transformation, tailored to your soul’s journey.</p>
-        <button class="mt-5 btn-outline w-full modal-trigger-btn" data-modal="mainModal">Book Your Session →</button>
+    <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Meet Dr. Neeraj Gupta</h2>
+    <div style="display: flex; gap: 50px; align-items: center; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 280px; text-align: center;">
+        <img src="https://i.ibb.co/Vfh1gMq/Dr-Neeraj-Introduction-image.png" alt="Dr Neeraj Gupta" style="width: 100%; max-width: 360px; border-radius: 32px; box-shadow: var(--shadow-hover); border: 4px solid var(--accent);">
+      </div>
+      <div style="flex: 2; min-width: 280px;">
+        <h3 style="font-size: 2rem; color: var(--primary-dark);">✨ I’m Dr. Neeraj Gupta</h3>
+        <p style="margin: 20px 0; line-height: 1.7;">from the foothills of the Himalayas. Despite a successful medical career, I felt unfulfilled—prescriptions only provided temporary relief, not true healing. The question “How can I help people truly heal?” grew louder until I could no longer ignore it. I left my practice to seek a deeper solution.</p>
+        <p style="margin-bottom: 16px;">Under my enlightened Master, Dr. Ajay Kotwal, I discovered Spiritual Enlightenment, Mindfulness, Meditation, and Cosmic Consciousness. He taught me: Consciousness is everywhere; you are an ocean of Consciousness.</p>
+        <p style="margin-bottom: 16px;">Blending ancient wisdom with modern psychology, I developed holistic tools for healing. Now, I guide individuals to overcome suffering, find peace, and build resilience. Leaving medicine wasn’t easy, but it was right. Today, I don’t just treat symptoms—I empower people to heal from within and transform their lives.</p>
+        <p style="font-style: italic; background: white; padding: 16px 24px; border-radius: 40px;">"Healing begins the moment you decide to listen to your soul." – Dr. Neeraj</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- NEW SECTION: Dr. Neeraj Gupta Story (before reviews) -->
-<section id="dr-neeraj" class="py-28">
+<!-- FAQ SECTION: 4 general queries (no price/insurance) -->
+<section class="section-padding" style="background: var(--white);">
+  <div class="container" style="max-width: 800px;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 40px; text-align: center;">Curious mind?</h2>
+    <div class="faq-list">
+      <div class="faq-item" style="margin-bottom: 16px;">
+        <div class="faq-question" onclick="toggleFaq(this)">I'm new to spirituality — where do I start? <span>▼</span></div>
+        <div class="faq-answer">You start exactly where you are. Dr. Neeraj offers a free discovery call to understand your journey and suggest the best path forward — meditation, mentorship, or energy healing.</div>
+      </div>
+      <div class="faq-item" style="margin-bottom: 16px;">
+        <div class="faq-question" onclick="toggleFaq(this)">Do you offer online sessions? <span>▼</span></div>
+        <div class="faq-answer">Yes, all sessions are available via Zoom or phone. Healing transcends distance — you can join from anywhere in the world.</div>
+      </div>
+      <div class="faq-item" style="margin-bottom: 16px;">
+        <div class="faq-question" onclick="toggleFaq(this)">How is this different from regular therapy? <span>▼</span></div>
+        <div class="faq-answer">Dr. Neeraj blends modern psychological understanding with timeless spiritual wisdom. You’ll receive tools for deep inner transformation, not just symptom management.</div>
+      </div>
+      <div class="faq-item" style="margin-bottom: 16px;">
+        <div class="faq-question" onclick="toggleFaq(this)">What can I expect in a free discovery call? <span>▼</span></div>
+        <div class="faq-answer">A compassionate 30-minute conversation to understand your needs, explain how spiritual healing works, and answer any questions — no pressure, purely supportive.</div>
+      </div>
+    </div>
+    <!-- another CTA inside FAQ (third distinct CTA) -->
+    <div style="text-align: center; margin-top: 48px;">
+      <button class="btn-primary open-booking-modal-3" style="background: var(--primary);">💬 Ask Dr. Neeraj — Free Session</button>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE MAP & CONTACT SECTION -->
+<section id="contact" class="section-padding" style="background: var(--neutral-100); scroll-margin-top: 70px;">
   <div class="container">
-    <div class="story-card">
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="md:w-1/3 flex justify-center">
-          <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-[#D9B650] shadow-xl">
-            <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=400&auto=format" alt="Dr. Neeraj Gupta" class="w-full h-full object-cover">
-          </div>
+    <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Visit the healing space</h2>
+    <div class="business-address">
+      <i class="fas fa-map-pin"></i> 1st Floor, 200 A/D, Left Lane of Panch Mandir, Gandhi Nagar, Jammu, Jammu and Kashmir 180004
+    </div>
+    <div class="contact-icon-row">
+      <a href="tel:+917780814739"><i class="fas fa-phone-alt"></i> +91 77808 14739</a>
+      <a href="https://wa.me/917780814739" target="_blank"><i class="fab fa-whatsapp"></i> +91 77808 14739 (WhatsApp)</a>
+    </div>
+    <div style="margin: 30px 0 10px;">
+      <span class="timing-badge"><i class="fas fa-sun"></i> Mon–Sat: 10:00 AM – 7:00 PM</span>
+      <span class="timing-badge"><i class="fas fa-moon"></i> Sundays: By appointment</span>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3352.123456789!2d74.857!3d32.735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e9b1a2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sPanch%20Mandir%2C%20Gandhi%20Nagar%2C%20Jammu!5e0!3m2!1sen!2sin!4v1612345678901!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div style="text-align: center; margin: 20px 0;">
+      <a href="https://maps.app.goo.gl/zAcDXpSTgxv7iRx4A" target="_blank" class="btn-outline"><i class="fas fa-directions"></i> Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #0f172a; color: #cbd5e1; padding: 48px 24px 24px;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px;">
+      <div>
+        <div style="font-family: 'Playfair Display'; font-size: 1.8rem; color: var(--accent);">Dr. Neeraj Gupta</div>
+        <p style="margin: 16px 0;">Healing from within · Spiritual Mentor · Jammu</p>
+        <div style="display: flex; gap: 16px;">
+          <i class="fab fa-instagram fa-lg"></i>
+          <i class="fab fa-youtube fa-lg"></i>
+          <i class="fab fa-facebook fa-lg"></i>
         </div>
-        <div class="md:w-2/3">
-          <span class="section-sub">✨ Wisdom from the Himalayas</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">Dr. Neeraj Gupta</h2>
-          <div class="text-[#E8DFCF] space-y-4">
-            <p><i class="fas fa-mountain text-[#D9B650] mr-2"></i> From the foothills of the Himalayas, I began my journey as a medical doctor. Despite a successful career, I felt unfulfilled—prescriptions only provided temporary relief, not true healing. The question “How can I help people truly heal?” grew louder until I could no longer ignore it. I left my practice to seek a deeper solution.</p>
-            <p>Under my enlightened Master, <strong class="text-[#D9B650]">Dr. Ajay Kotwal</strong>, I discovered Spiritual Enlightenment, Mindfulness, Meditation, and Cosmic Consciousness. He taught me: <em class="italic">Consciousness is everywhere; you are an ocean of Consciousness.</em></p>
-            <p>Blending ancient wisdom with modern psychology, I developed holistic tools for healing. Now, I guide individuals to overcome suffering, find peace, and build resilience. Leaving medicine wasn’t easy, but it was right. Today, I don’t just treat symptoms—I empower people to heal from within and transform their lives.</p>
-          </div>
-          <button class="btn-primary mt-6 modal-trigger-btn" data-modal="mainModal"><i class="fas fa-feather-alt"></i> Begin Your Healing Journey</button>
-        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul style="list-style: none; margin-top: 12px;">
+          <li><a href="tel:+917780814739" style="color: #cbd5e1; text-decoration: none;">📞 +91 77808 14739</a></li>
+          <li><a href="https://wa.me/917780814739" style="color: #cbd5e1; text-decoration: none;">💬 WhatsApp</a></li>
+          <li>Gandhi Nagar, Jammu</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul style="list-style: none; margin-top: 12px;">
+          <li><a href="#about" style="color: #cbd5e1; text-decoration: none;">About</a></li>
+          <li><a href="#programs" style="color: #cbd5e1; text-decoration: none;">Offerings</a></li>
+          <li><a href="#reviews" style="color: #cbd5e1; text-decoration: none;">Stories</a></li>
+        </ul>
       </div>
     </div>
+    <hr style="margin: 40px 0 20px; border-color: #334155;">
+    <div style="text-align: center;">© 2025 Dr. Neeraj Gupta — Inner Transformation. All rights reserved.</div>
   </div>
-</section>
-
-<!-- Reviews Section (Indian cities) -->
-<section id="reviews" class="py-28">
-  <div class="container">
-    <div class="text-center"><span class="section-sub">Sacred Voices</span><h2 class="section-title">Blessings from the community</h2></div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-14">
-      <div class="testimonial-card"><i class="fas fa-quote-left text-[#D9B650] text-2xl mb-3"></i><p class="italic">“Dr. Neeraj’s guidance shifted my energy profoundly. As a resident of Jammu City, this felt like a personal retreat.”</p><p class="font-bold mt-4">— Meera Sharma, Jammu City</p><div class="text-[#D9B650] text-sm mt-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left text-[#D9B650] text-2xl mb-3"></i><p class="italic">“Gandhi Nagar: the morning rituals grounded me. My throat chakra opened; now I speak my truth.”</p><p class="font-bold mt-4">— Vikram Singh, Gandhi Nagar</p><div class="text-[#D9B650] text-sm mt-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left text-[#D9B650] text-2xl mb-3"></i><p class="italic">“Greater Kailash: I was skeptical but the chakra course healed old wounds. Truly divine.”</p><p class="font-bold mt-4">— Priya Kapoor, Greater Kailash</p><div class="text-[#D9B650] text-sm mt-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left text-[#D9B650] text-2xl mb-3"></i><p class="italic">“Chandigarh’s pace had me stressed. Dr. Neeraj’s meditations brought profound peace.”</p><p class="font-bold mt-4">— Arjun Nair, Chandigarh</p><div class="text-[#D9B650] text-sm mt-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-      <div class="testimonial-card"><i class="fas fa-quote-left text-[#D9B650] text-2xl mb-3"></i><p class="italic">“Pune based — shadow work was life-changing. Authentic and deeply compassionate.”</p><p class="font-bold mt-4">— Sneha Joshi, Pune</p><div class="text-[#D9B650] text-sm mt-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Section (4 general queries) -->
-<section id="faq" class="py-28 bg-[#080B13]">
-  <div class="container">
-    <div class="text-center"><span class="section-sub">Infinite Wisdom</span><h2 class="section-title">Frequently Asked Questions</h2></div>
-    <div class="grid md:grid-cols-2 gap-6 mt-14">
-      <div class="faq-item"><h3 class="text-xl font-bold mb-2">✨ How do I choose the right service?</h3><p class="text-[#E8DFCF]">Book a free discovery call. We’ll intuitively align with your current needs — whether it’s mentoring, or energy healing.</p></div>
-      <div class="faq-item"><h3 class="text-xl font-bold mb-2">🧘 Are sessions online or in-person?</h3><p class="text-[#E8DFCF]">All sessions are virtual (Zoom/Google Meet) for global accessibility. Immersive retreats happen occasionally in sacred Indian locations.</p></div>
-      <div class="faq-item"><h3 class="text-xl font-bold mb-2">🌿 Do I need prior spiritual experience?</h3><p class="text-[#E8DFCF]">Not at all. All paths welcome — beginners to advanced seekers. Every soul is honored.</p></div>
-      <div class="faq-item"><h3 class="text-xl font-bold mb-2">🔮 How soon can I expect shifts?</h3><p class="text-[#E8DFCF]">Many feel immediate clarity. For lasting transformation, consistency across a few sessions yields profound growth.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Google Map + Location -->
-<section id="contact" class="py-28">
-  <div class="container">
-    <div class="text-center"><span class="section-sub">Sacred Ground</span><h2 class="section-title">Our Sanctuary</h2></div>
-    <div class="map-premium mt-10">
-      <iframe src="https://maps.google.com/maps?q=Greater%20Kailash%2C%20New%20Delhi%2C%20India&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <p class="text-center mt-5 text-[#D9B650]"><i class="fas fa-map-marker-alt"></i> Greater Kailash, New Delhi — In-person gatherings by appointment only. Virtual sanctuary available worldwide.</p>
-  </div>
-</section>
-
-<!-- Final CTA (only Register Yourself button, removed Ask a Question) -->
-<section class="py-28 relative overflow-hidden" style="background: radial-gradient(circle at 80% 20%, #0C0F1A, #03050A);">
-  <div class="floating-orb bottom-0 left-0 opacity-30"></div>
-  <div class="container text-center relative z-10">
-    <h2 class="text-4xl md:text-6xl font-bold font-serif">Begin Your Journey Today</h2>
-    <p class="text-xl mt-5 max-w-2xl mx-auto">Step into alignment, clarity, and soul purpose. Choose your sacred path.</p>
-    <div class="flex flex-wrap gap-6 justify-center mt-12">
-      <button class="btn-primary text-lg px-9 modal-trigger-btn" data-modal="mainModal"><i class="fas fa-dove"></i> Register Yourself</button>
-      <!-- Ask a Question button removed -->
-    </div>
-    <div class="mt-10 text-sm text-[#D9B650]/70"><i class="fas fa-shield-alt"></i> 100% private · Money-back guarantee on sessions</div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="border-t border-[#D9B650]/20 py-12 bg-[#05070C]">
-  <div class="container grid md:grid-cols-4 gap-8">
-    <div><i class="fas fa-feather-alt text-2xl text-[#D9B650]"></i><p class="mt-3 text-sm">ĀtmaSoul — sacred space for awakening souls since 2012.</p><div class="flex gap-5 mt-4"><i class="fab fa-instagram hover:text-[#D9B650] cursor-pointer"></i><i class="fab fa-youtube hover:text-[#D9B650] cursor-pointer"></i><i class="fab fa-spotify hover:text-[#D9B650] cursor-pointer"></i></div></div>
-    <div><h4 class="font-bold text-lg">Explore</h4><ul class="mt-3 space-y-2 text-sm"><li><a href="#offerings">Offerings</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">Wisdom</a></li></ul></div>
-    <div><h4 class="font-bold text-lg">Support</h4><ul class="mt-3 space-y-2 text-sm"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#contact">Map</a></li></ul></div>
-    <div><h4 class="font-bold text-lg">Sacred Circle</h4><p class="text-sm">Receive soul wisdom & offers</p><form id="footerForm" class="mt-2 flex"><input type="email" id="footerEmail" placeholder="Your email" class="bg-[#11141F] border border-[#D9B650]/30 p-2 rounded-l-xl w-full"><button type="submit" class="bg-[#D9B650] px-3 rounded-r-xl text-[#0A0C14]"><i class="fas fa-paper-plane"></i></button></form></div>
-  </div>
-  <div class="container text-center pt-8 text-xs text-[#D9B650]/50">© 2025 ĀtmaSoul — Crafted with devotion. All rights reserved.</div>
 </footer>
 
-<!-- MODAL (Name + WhatsApp, sends to owner) -->
-<div id="leadModal" class="modal-overlay">
-  <div class="modal-container">
-    <i class="fas fa-feather-alt text-4xl text-[#D9B650] mb-3"></i>
-    <h3 class="text-2xl font-bold mb-2">Connect with Light</h3>
-    <p class="text-sm mb-3">Share your details, we’ll reach out on WhatsApp</p>
-    <form id="modalForm">
-      <input type="text" id="modalName" placeholder="Your Full Name" required>
-      <input type="tel" id="modalWhatsapp" placeholder="Your WhatsApp Number (with country code)" required>
-      <button type="submit" class="btn-primary w-full justify-center"><i class="fab fa-whatsapp"></i> Send & Connect</button>
-    </form>
-    <p class="text-xs mt-3 opacity-70">We’ll reply within a few hours.</p>
-    <button id="closeModalBtn" class="mt-3 text-[#D9B650] underline">Close</button>
+<!-- MODAL POPUP (collect name & whatsapp, send to owner) -->
+<div id="bookingModal" class="modal-overlay">
+  <div class="modal-card">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <h3>Begin your journey 🌼</h3>
+    <p>Share your details, Dr. Neeraj will reach out on WhatsApp to schedule your free session.</p>
+    <input type="text" id="modalName" placeholder="Your name" required>
+    <input type="tel" id="modalWhatsapp" placeholder="WhatsApp number" required>
+    <button class="btn-primary" id="sendWhatsAppBtn">Send via WhatsApp</button>
   </div>
 </div>
 
 <script>
-  // Starfield generator
-  const starfield = document.getElementById('starfieldContainer');
-  if(starfield){
-    for(let i=0;i<200;i++){
-      let star = document.createElement('div');
-      star.classList.add('star');
-      let sz = Math.random() * 3 + 1;
-      star.style.width = sz+'px'; star.style.height = sz+'px';
-      star.style.left = Math.random()*100+'%';
-      star.style.top = Math.random()*100+'%';
-      star.style.animationDelay = Math.random()*3+'s';
-      star.style.animationDuration = Math.random()*2+1.5+'s';
-      starfield.appendChild(star);
-    }
+  // Toggle mobile menu
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+  // FAQ toggle
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    item.classList.toggle('active');
+    const span = el.querySelector('span');
+    span.innerHTML = item.classList.contains('active') ? '▲' : '▼';
   }
 
-  // Modal logic
-  const modal = document.getElementById('leadModal');
-  const modalForm = document.getElementById('modalForm');
-  const closeModalBtn = document.getElementById('closeModalBtn');
-  const ownerWhatsApp = '917780814739';
+  // MODAL LOGIC for all CTAs (multiple classes)
+  const modal = document.getElementById('bookingModal');
+  const nameInput = document.getElementById('modalName');
+  const waInput = document.getElementById('modalWhatsapp');
+  const sendBtn = document.getElementById('sendWhatsAppBtn');
+  const OWNER_NUMBER = '917780814739'; // without +, for WhatsApp
 
-  function openModal() { modal.classList.add('active'); }
-  function closeModal() { modal.classList.remove('active'); }
+  function openModal() {
+    modal.style.display = 'flex';
+  }
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-  document.querySelectorAll('.modal-trigger-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal();
-    });
-  });
-  closeModalBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+  // Attach to all buttons with classes: open-booking-modal, open-booking-modal-2, open-booking-modal-3
+  const ctaButtons = document.querySelectorAll('.open-booking-modal, .open-booking-modal-2, .open-booking-modal-3');
+  ctaButtons.forEach(btn => btn.addEventListener('click', openModal));
 
-  modalForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('modalName').value.trim();
-    const whatsapp = document.getElementById('modalWhatsapp').value.trim();
-    if(!name || !whatsapp){
-      alert("Please enter your name and WhatsApp number.");
+  sendBtn.addEventListener('click', () => {
+    const name = nameInput.value.trim();
+    const wa = waInput.value.trim();
+    if (!name || !wa) {
+      alert('Please enter your name and WhatsApp number.');
       return;
     }
-    const message = `New Lead from ĀtmaSoul%0A%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(whatsapp)}%0AInterested in spiritual guidance.`;
-    window.open(`https://wa.me/${ownerWhatsApp}?text=${message}`, '_blank');
-    alert(`Thank you ${name}! We'll connect on WhatsApp shortly.`);
+    const cleanWA = wa.replace(/[^0-9+]/g, '');
+    const message = `Namaste Dr. Neeraj, I'm ${name} (${cleanWA}). I'm interested in a free discovery call / healing session.`;
+    const url = `https://wa.me/${OWNER_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
     closeModal();
-    modalForm.reset();
+    nameInput.value = '';
+    waInput.value = '';
   });
 
-  // Footer newsletter
-  const footerForm = document.getElementById('footerForm');
-  if(footerForm){
-    footerForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('footerEmail').value;
-      if(email) alert("✨ You're now part of the Sacred Circle. Blessings.");
-      else alert("Please enter an email.");
-      footerForm.reset();
-    });
-  }
+  // close mobile menu on link click
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => document.getElementById('mobileMenu').style.display = 'none');
+  });
 </script>
 </body>
 </html>
