@@ -319,38 +319,33 @@
       }
     }
 
-    /* hero with cover image */
-    .hero-spiritual {
+    /* cover image section - full width above text */
+    .cover-section {
+      width: 100%;
+      position: relative;
+    }
+    .cover-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      max-height: 70vh;
+    }
+
+    /* hero text section with starfield */
+    .hero-text-section {
       position: relative;
       background: #000;
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
+      padding: 80px 0;
       overflow: hidden;
     }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://i.ibb.co/TMkktFvr/spiritual-guide-thumbnail.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.5);
-      z-index: 1;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
-      z-index: 2;
-    }
-    .stars {
+    .stars-bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 3;
     }
     .star {
       position: absolute;
@@ -363,10 +358,12 @@
       0% { opacity: 0.2; transform: scale(1); }
       100% { opacity: 1; transform: scale(1.2); }
     }
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      max-width: 700px;
+    .aurora {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 40%, rgba(168,85,247,0.15), transparent 70%),
+                  radial-gradient(ellipse at 70% 60%, rgba(251,191,36,0.1), transparent 70%);
+      pointer-events: none;
     }
 
     /* grid */
@@ -375,17 +372,8 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
     }
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-    @media (max-width: 1024px) {
-      .grid-4 { grid-template-columns: repeat(2, 1fr); }
-    }
     @media (max-width: 768px) {
       .grid-3 { grid-template-columns: 1fr; }
-      .grid-4 { grid-template-columns: 1fr; }
     }
 
     img.placeholder-img {
@@ -570,16 +558,20 @@
   <button class="btn-primary open-booking-modal" style="margin-top: 20px;">✨ Discovery Call</button>
 </div>
 
-<!-- hero with cover image -->
-<section id="home" class="hero-spiritual">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="stars" id="starfield"></div>
+<!-- COVER IMAGE FIRST (full width) -->
+<div class="cover-section">
+  <img src="https://i.ibb.co/TMkktFvr/spiritual-guide-thumbnail.jpg" alt="Spiritual Guide" class="cover-image">
+</div>
+
+<!-- HERO TEXT SECTION with starfield and content -->
+<section id="home" class="hero-text-section">
+  <div class="stars-bg" id="starfield"></div>
+  <div class="aurora"></div>
   <div class="container" style="position: relative; z-index: 10;">
-    <div class="hero-content">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
       <h1 style="font-size: clamp(2.8rem, 8vw, 4.5rem); background: linear-gradient(135deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 1rem;">Heal from Within<br>Awaken Your True Self</h1>
       <p style="font-size: 1.4rem; margin: 24px 0; color: var(--text-muted);">Dr. Neeraj Gupta — Spiritual Mentor, Mindfulness Guide, Healer. Jammu & Online</p>
-      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
         <button class="btn-primary open-booking-modal" style="font-size: 1.1rem;">🌿 Discovery Call</button>
         <a href="#programs" style="color: var(--gold); font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">Explore offerings</a>
       </div>
