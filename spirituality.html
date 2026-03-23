@@ -1,3 +1,5 @@
+Here is the final HTML document with the requested updates: three spiritual offerings in the correct sequence, Dr. Neeraj's image made circular with a golden border, and all contact numbers updated.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -299,7 +301,7 @@
       pointer-events: none;
     }
 
-    /* grid */
+    /* grid - now using 3 columns for offerings */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -324,6 +326,21 @@
       object-fit: cover;
       border-radius: 20px;
       border: 1px solid rgba(251,191,36,0.3);
+    }
+
+    /* circular image for dr neeraj */
+    .dr-image {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border: 4px solid var(--gold);
+      box-shadow: 0 0 30px rgba(251,191,36,0.3);
+      transition: transform 0.3s;
+    }
+    .dr-image:hover {
+      transform: scale(1.02);
     }
 
     /* map */
@@ -452,24 +469,14 @@
       background: #03000a;
       border-top: 1px solid rgba(251,191,36,0.2);
     }
-
-    /* decorative mandala svg (optional) */
-    .mandala-bg {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 300px;
-      opacity: 0.05;
-      pointer-events: none;
-    }
   </style>
 </head>
 <body>
 
-<!-- fixed bottom buttons -->
+<!-- fixed bottom buttons with updated numbers -->
 <div class="fixed-bottom-buttons">
-  <button class="btn-call" onclick="window.location.href='tel:+917780814739'"><i class="fas fa-phone-alt"></i> Call Now</button>
-  <button class="btn-wa" onclick="window.open('https://wa.me/917780814739','_blank')"><i class="fab fa-whatsapp"></i> WhatsApp Now</button>
+  <button class="btn-call" onclick="window.location.href='tel:+919419168378'"><i class="fas fa-phone-alt"></i> Call Now</button>
+  <button class="btn-wa" onclick="window.open('https://wa.me/919419168378','_blank')"><i class="fab fa-whatsapp"></i> WhatsApp Now</button>
 </div>
 
 <!-- navbar only brand -->
@@ -496,34 +503,31 @@
   </div>
 </section>
 
-<!-- programs -->
+<!-- programs section: exactly 3 offerings in the required sequence -->
 <section id="programs" class="section-padding" style="background: radial-gradient(circle at 10% 20%, #03000a, #000); scroll-margin-top: 80px;">
   <div class="container">
     <h2>Spiritual offerings for deep healing</h2>
-    <div class="grid-4" style="margin-top: 40px;">
+    <div class="grid-3" style="margin-top: 40px;">
+      <!-- 1. Guided Meditation -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&auto=format" class="placeholder-img" alt="meditation">
-        <div style="margin-top: 16px;"><span class="badge">Mindfulness</span></div>
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&auto=format" class="placeholder-img" alt="Guided Meditation">
+        <div style="margin-top: 16px;"><span class="badge">Meditation</span></div>
         <h3 style="margin: 12px 0 4px;">Guided Meditation</h3>
-        <p style="color: var(--text-muted);">Calm the mind, reduce anxiety, connect to inner stillness.</p>
+        <p style="color: var(--text-muted);">Calm the mind, reduce anxiety, connect to inner stillness. Personalized sessions to deepen awareness.</p>
       </div>
+      <!-- 2. Energy & Inner Work -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format" class="placeholder-img" alt="spiritual mentorship">
+        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&auto=format" class="placeholder-img" alt="Energy & Inner Work">
+        <div style="margin-top: 16px;"><span class="badge">Energy Healing</span></div>
+        <h3 style="margin: 12px 0 4px;">Energy & Inner Work</h3>
+        <p style="color: var(--text-muted);">Release deep-rooted blocks, restore emotional balance. Chakra alignment and inner child healing.</p>
+      </div>
+      <!-- 3. 1:1 Spiritual Mentorship -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format" class="placeholder-img" alt="Spiritual Mentorship">
         <div style="margin-top: 16px;"><span class="badge">Mentorship</span></div>
         <h3 style="margin: 12px 0 4px;">1:1 Spiritual Mentorship</h3>
-        <p style="color: var(--text-muted);">Personalised guidance to dissolve suffering & discover purpose.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&auto=format" class="placeholder-img" alt="energy healing">
-        <div style="margin-top: 16px;"><span class="badge">Healing</span></div>
-        <h3 style="margin: 12px 0 4px;">Energy & Inner Child Work</h3>
-        <p style="color: var(--text-muted);">Release deep-rooted blocks, restore emotional balance.</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&auto=format" class="placeholder-img" alt="cosmic consciousness">
-        <div style="margin-top: 16px;"><span class="badge">Awakening</span></div>
-        <h3 style="margin: 12px 0 4px;">Cosmic Consciousness</h3>
-        <p style="color: var(--text-muted);">Ancient wisdom + modern psychology for holistic transformation.</p>
+        <p style="color: var(--text-muted);">Personalised guidance to dissolve suffering, discover purpose, and walk your dharma with clarity.</p>
       </div>
     </div>
     <div style="text-align: center; margin-top: 50px;">
@@ -532,7 +536,7 @@
   </div>
 </section>
 
-<!-- reviews -->
+<!-- reviews section -->
 <section id="reviews" class="section-padding" style="background: #000000; scroll-margin-top: 70px;">
   <div class="container">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
@@ -550,13 +554,13 @@
   </div>
 </section>
 
-<!-- about dr neeraj -->
+<!-- about dr neeraj with circular image and golden border -->
 <section id="about" class="section-padding" style="background: radial-gradient(circle at 80% 30%, #050010, #000); scroll-margin-top: 70px;">
   <div class="container">
     <h2>Meet Dr. Neeraj Gupta</h2>
     <div style="display: flex; gap: 50px; align-items: center; flex-wrap: wrap; margin-top: 30px;">
       <div style="flex: 1; min-width: 280px; text-align: center;">
-        <img src="https://i.ibb.co/Vfh1gMq/Dr-Neeraj-Introduction-image.png" alt="Dr Neeraj Gupta" style="width: 100%; max-width: 360px; border-radius: 32px; box-shadow: 0 0 30px rgba(251,191,36,0.3); border: 2px solid rgba(251,191,36,0.5);">
+        <img src="https://i.ibb.co/Vfh1gMq/Dr-Neeraj-Introduction-image.png" alt="Dr Neeraj Gupta" class="dr-image">
       </div>
       <div style="flex: 2; min-width: 280px;">
         <h3 style="font-size: 2rem; color: var(--gold); margin-bottom: 1rem;">✨ I’m Dr. Neeraj Gupta</h3>
@@ -569,7 +573,7 @@
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ section -->
 <section class="section-padding" style="background: #000;">
   <div class="container" style="max-width: 800px;">
     <h2 style="text-align: center;">Curious mind?</h2>
@@ -597,7 +601,7 @@
   </div>
 </section>
 
-<!-- contact & map -->
+<!-- contact & map with updated numbers -->
 <section id="contact" class="section-padding" style="background: radial-gradient(circle at 20% 80%, #04000c, #000); scroll-margin-top: 70px;">
   <div class="container">
     <h2>Visit the healing space</h2>
@@ -605,8 +609,8 @@
       <i class="fas fa-map-pin" style="color: var(--gold);"></i> 1st Floor, 200 A/D, Left Lane of Panch Mandir, Gandhi Nagar, Jammu, Jammu and Kashmir 180004
     </div>
     <div class="contact-icon-row">
-      <a href="tel:+917780814739"><i class="fas fa-phone-alt"></i> +91 77808 14739</a>
-      <a href="https://wa.me/917780814739" target="_blank"><i class="fab fa-whatsapp"></i> +91 77808 14739 (WhatsApp)</a>
+      <a href="tel:+919419168378"><i class="fas fa-phone-alt"></i> +91 94191 68378</a>
+      <a href="https://wa.me/919419168378" target="_blank"><i class="fab fa-whatsapp"></i> +91 94191 68378 (WhatsApp)</a>
     </div>
     <div style="margin: 30px 0 10px;">
       <span class="timing-badge"><i class="fas fa-sun"></i> Mon–Sat: 10:00 AM – 7:00 PM</span>
@@ -626,7 +630,7 @@
   <div class="container">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px;">
       <div><div style="font-family: 'Playfair Display'; font-size: 1.8rem; color: var(--gold);">Dr. Neeraj Gupta</div><p style="margin: 16px 0; color: var(--text-muted);">Healing from within · Spiritual Mentor · Jammu</p><div style="display: flex; gap: 16px; color: var(--gold);"><i class="fab fa-instagram fa-lg"></i><i class="fab fa-youtube fa-lg"></i><i class="fab fa-facebook fa-lg"></i></div></div>
-      <div><h4>Contact</h4><ul style="list-style: none; margin-top: 12px;"><li><a href="tel:+917780814739" style="color: var(--text-muted); text-decoration: none;">📞 +91 77808 14739</a></li><li><a href="https://wa.me/917780814739" style="color: var(--text-muted); text-decoration: none;">💬 WhatsApp</a></li><li style="color: var(--text-muted);">Gandhi Nagar, Jammu</li></ul></div>
+      <div><h4>Contact</h4><ul style="list-style: none; margin-top: 12px;"><li><a href="tel:+919419168378" style="color: var(--text-muted); text-decoration: none;">📞 +91 94191 68378</a></li><li><a href="https://wa.me/919419168378" style="color: var(--text-muted); text-decoration: none;">💬 WhatsApp</a></li><li style="color: var(--text-muted);">Gandhi Nagar, Jammu</li></ul></div>
       <div><h4>Explore</h4><ul style="list-style: none; margin-top: 12px;"><li><a href="#about" style="color: var(--text-muted); text-decoration: none;">About</a></li><li><a href="#programs" style="color: var(--text-muted); text-decoration: none;">Offerings</a></li><li><a href="#reviews" style="color: var(--text-muted); text-decoration: none;">Stories</a></li></ul></div>
     </div>
     <hr style="margin: 40px 0 20px; border-color: rgba(251,191,36,0.2);">
@@ -677,7 +681,7 @@
   const nameInput = document.getElementById('modalName');
   const waInput = document.getElementById('modalWhatsapp');
   const sendBtn = document.getElementById('sendWhatsAppBtn');
-  const OWNER_NUMBER = '917780814739';
+  const OWNER_NUMBER = '919419168378'; // updated owner WhatsApp
 
   function openModal() { modal.style.display = 'flex'; }
   function closeModal() { modal.style.display = 'none'; }
@@ -698,3 +702,4 @@
 </script>
 </body>
 </html>
+```
