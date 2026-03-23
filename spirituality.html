@@ -234,11 +234,11 @@
       filter: brightness(1.05);
     }
 
-    /* navbar - minimal with gold accent */
+    /* navbar with menu options */
     .navbar {
       position: sticky;
       top: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(251,191,36,0.2);
       z-index: 50;
@@ -248,28 +248,100 @@
       max-width: var(--container-max);
       margin: 0 auto;
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
     }
     .brand {
       font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
+      font-size: 1.6rem;
       font-weight: 700;
       background: linear-gradient(135deg, #fff, var(--gold));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       letter-spacing: 1px;
-      text-shadow: 0 0 8px rgba(251,191,36,0.3);
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--gold);
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      padding: 80px 24px;
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+    }
+    .mobile-menu a {
+      font-size: 28px;
+      text-decoration: none;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .close-menu {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 32px;
+      cursor: pointer;
+      color: var(--gold);
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
     }
 
-    /* starfield & spiritual hero */
+    /* hero with cover image */
     .hero-spiritual {
       position: relative;
       background: #000;
-      min-height: 80vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://i.ibb.co/TMkktFvr/spiritual-guide-thumbnail.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5);
+      z-index: 1;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+      z-index: 2;
     }
     .stars {
       position: absolute;
@@ -277,8 +349,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: transparent;
       pointer-events: none;
+      z-index: 3;
     }
     .star {
       position: absolute;
@@ -291,15 +363,13 @@
       0% { opacity: 0.2; transform: scale(1); }
       100% { opacity: 1; transform: scale(1.2); }
     }
-    .aurora {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 40%, rgba(168,85,247,0.15), transparent 70%),
-                  radial-gradient(ellipse at 70% 60%, rgba(251,191,36,0.1), transparent 70%);
-      pointer-events: none;
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 700px;
     }
 
-    /* grid - now using 3 columns for offerings */
+    /* grid */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -462,7 +532,6 @@
       border: 1px solid rgba(251,191,36,0.3);
     }
 
-    /* footer */
     footer {
       background: #03000a;
       border-top: 1px solid rgba(251,191,36,0.2);
@@ -471,25 +540,43 @@
 </head>
 <body>
 
-<!-- fixed bottom buttons with updated numbers -->
+<!-- fixed bottom buttons -->
 <div class="fixed-bottom-buttons">
   <button class="btn-call" onclick="window.location.href='tel:+919419168378'"><i class="fas fa-phone-alt"></i> Call Now</button>
   <button class="btn-wa" onclick="window.open('https://wa.me/919419168378','_blank')"><i class="fab fa-whatsapp"></i> WhatsApp Now</button>
 </div>
 
-<!-- navbar only brand -->
+<!-- navbar with menu options -->
 <nav class="navbar">
   <div class="nav-container">
     <div class="brand">Dr. Neeraj Gupta</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☯</div>
   </div>
 </nav>
 
-<!-- hero with starfield -->
-<section class="hero-spiritual">
+<!-- mobile menu -->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="close-menu" onclick="toggleMenu()">✕</div>
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#programs" onclick="toggleMenu()">Programs</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <button class="btn-primary open-booking-modal" style="margin-top: 20px;">✨ Discovery Call</button>
+</div>
+
+<!-- hero with cover image -->
+<section id="home" class="hero-spiritual">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
   <div class="stars" id="starfield"></div>
-  <div class="aurora"></div>
-  <div class="container" style="position: relative; z-index: 5;">
-    <div style="max-width: 700px;">
+  <div class="container" style="position: relative; z-index: 10;">
+    <div class="hero-content">
       <h1 style="font-size: clamp(2.8rem, 8vw, 4.5rem); background: linear-gradient(135deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 1rem;">Heal from Within<br>Awaken Your True Self</h1>
       <p style="font-size: 1.4rem; margin: 24px 0; color: var(--text-muted);">Dr. Neeraj Gupta — Spiritual Mentor, Mindfulness Guide, Healer. Jammu & Online</p>
       <div style="display: flex; gap: 20px; flex-wrap: wrap;">
@@ -501,7 +588,7 @@
   </div>
 </section>
 
-<!-- programs section: exactly 3 offerings in the required sequence -->
+<!-- programs section: exactly 3 offerings in required sequence -->
 <section id="programs" class="section-padding" style="background: radial-gradient(circle at 10% 20%, #03000a, #000); scroll-margin-top: 80px;">
   <div class="container">
     <h2>Spiritual offerings for deep healing</h2>
@@ -535,7 +622,7 @@
 </section>
 
 <!-- reviews section -->
-<section id="reviews" class="section-padding" style="background: #000000; scroll-margin-top: 70px;">
+<section class="section-padding" style="background: #000000; scroll-margin-top: 70px;">
   <div class="container">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
       <h2>Hearts that healed</h2>
@@ -552,7 +639,7 @@
   </div>
 </section>
 
-<!-- about dr neeraj with circular image and golden border -->
+<!-- about dr neeraj with circular image -->
 <section id="about" class="section-padding" style="background: radial-gradient(circle at 80% 30%, #050010, #000); scroll-margin-top: 70px;">
   <div class="container">
     <h2>Meet Dr. Neeraj Gupta</h2>
@@ -599,7 +686,7 @@
   </div>
 </section>
 
-<!-- contact & map with updated numbers -->
+<!-- contact & map -->
 <section id="contact" class="section-padding" style="background: radial-gradient(circle at 20% 80%, #04000c, #000); scroll-margin-top: 70px;">
   <div class="container">
     <h2>Visit the healing space</h2>
@@ -653,7 +740,7 @@
   function createStars() {
     const container = document.getElementById('starfield');
     if (!container) return;
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 150; i++) {
       const star = document.createElement('div');
       star.classList.add('star');
       const size = Math.random() * 2 + 1;
@@ -668,6 +755,11 @@
   }
   createStars();
 
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+
   function toggleFaq(el) {
     const item = el.closest('.faq-item');
     item.classList.toggle('active');
@@ -679,7 +771,7 @@
   const nameInput = document.getElementById('modalName');
   const waInput = document.getElementById('modalWhatsapp');
   const sendBtn = document.getElementById('sendWhatsAppBtn');
-  const OWNER_NUMBER = '919419168378'; // updated owner WhatsApp
+  const OWNER_NUMBER = '919419168378';
 
   function openModal() { modal.style.display = 'flex'; }
   function closeModal() { modal.style.display = 'none'; }
@@ -696,6 +788,13 @@
     closeModal();
     nameInput.value = '';
     waInput.value = '';
+  });
+
+  // close mobile menu when clicking links
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileMenu').style.display = 'none';
+    });
   });
 </script>
 </body>
