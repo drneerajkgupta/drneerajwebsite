@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ----- DESIGN SYSTEM: SERENE BLUE + GOLD (spiritual healing) ----- */
+    /* ----- DARK MODE THEME: deep space with gold accents ----- */
     * {
       margin: 0;
       padding: 0;
@@ -18,16 +18,17 @@
     }
 
     :root {
-      --primary: #2c5282;        /* deep indigo */
-      --primary-dark: #1a365d;   /* navy */
-      --primary-light: #e6f0ff;   /* soft blue */
-      --accent: #e6b422;          /* warm gold */
-      --neutral-900: #1e293b;
-      --neutral-500: #475569;
-      --neutral-100: #f8fafc;
-      --white: #ffffff;
-      --shadow-card: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
-      --shadow-hover: 0 20px 30px -10px rgba(44,82,130,0.2);
+      --primary: #8b5cf6;        /* violet for highlights */
+      --primary-dark: #6d28d9;
+      --primary-light: #2d2a3e;
+      --accent: #fbbf24;          /* golden yellow */
+      --neutral-900: #f1f5f9;
+      --neutral-500: #cbd5e1;
+      --neutral-100: #1e1a2f;
+      --white: #0f0a1f;
+      --card-bg: #1a1625;
+      --shadow-card: 0 10px 25px -5px rgba(0,0,0,0.3);
+      --shadow-hover: 0 20px 30px -10px rgba(139,92,246,0.3);
       --border-radius-card: 16px;
       --border-radius-pill: 9999px;
       --container-max: 1280px;
@@ -84,7 +85,7 @@
       gap: 8px;
       text-decoration: none;
       line-height: 1;
-      box-shadow: 0 4px 6px -2px rgba(44,82,130,0.3);
+      box-shadow: 0 4px 6px -2px rgba(139,92,246,0.3);
     }
     .btn-primary:hover {
       background: var(--primary-dark);
@@ -102,11 +103,11 @@
       transition: 0.2s;
     }
     .btn-outline:hover {
-      background: var(--primary-light);
+      background: rgba(139,92,246,0.2);
     }
 
     .card {
-      background: var(--white);
+      background: var(--card-bg);
       border-radius: var(--border-radius-card);
       padding: 24px;
       box-shadow: var(--shadow-card);
@@ -118,7 +119,7 @@
 
     .badge {
       background: var(--accent);
-      color: var(--neutral-900);
+      color: #0f0a1f;
       font-size: 0.75rem;
       font-weight: 600;
       padding: 4px 12px;
@@ -139,7 +140,7 @@
       padding: 0 16px;
     }
     .btn-call {
-      background-color: #dc2626; /* red */
+      background-color: #dc2626;
       color: white;
       border: none;
       padding: 14px 28px;
@@ -147,14 +148,14 @@
       font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 10px;
     }
     .btn-wa {
-      background-color: #25D366; /* WhatsApp green */
+      background-color: #25D366;
       color: white;
       border: none;
       padding: 14px 28px;
@@ -162,7 +163,7 @@
       font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.2s;
       display: inline-flex;
       align-items: center;
@@ -176,13 +177,13 @@
       .fixed-bottom-buttons { gap: 12px; bottom: 16px; }
     }
 
-    /* navigation */
+    /* SIMPLE NAVBAR: only brand name, no links */
     .navbar {
       position: sticky;
       top: 0;
-      background: rgba(255,255,255,0.92);
+      background: rgba(15,10,31,0.9);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(251,191,36,0.2);
       z-index: 50;
       padding: 16px 24px;
     }
@@ -191,52 +192,22 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center; /* center brand name */
     }
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
     }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--neutral-900);
-      font-weight: 500;
-    }
-    .nav-links a:hover {
+    .brand span {
       color: var(--primary);
     }
-    .hamburger {
+
+    /* no mobile menu needed (no links), but keep hidden */
+    .hamburger, .mobile-menu, .nav-links, .nav-cta {
       display: none;
-      font-size: 28px;
-      cursor: pointer;
-    }
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: white;
-      z-index: 100;
-      padding: 40px 24px;
-      flex-direction: column;
-      gap: 24px;
-    }
-    .mobile-menu a {
-      font-size: 24px;
-      text-decoration: none;
-      color: var(--neutral-900);
-    }
-    .close-menu {
-      align-self: flex-end;
-      font-size: 32px;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: block; }
     }
 
     /* grid */
@@ -286,11 +257,12 @@
       display: inline-block;
       font-weight: 500;
       margin-top: 20px;
+      color: var(--neutral-900);
     }
 
     /* FAQ */
     .faq-question {
-      background: var(--neutral-100);
+      background: var(--card-bg);
       padding: 18px 24px;
       border-radius: 40px;
       font-weight: 600;
@@ -313,33 +285,37 @@
       display: none;
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.8);
       align-items: center;
       justify-content: center;
       z-index: 200;
     }
     .modal-card {
-      background: white;
+      background: var(--card-bg);
       max-width: 450px;
       width: 90%;
       padding: 40px 30px;
       border-radius: 32px;
       position: relative;
       text-align: center;
+      color: var(--neutral-900);
     }
     .modal-close {
       position: absolute;
       top: 20px; right: 24px;
       font-size: 28px;
       cursor: pointer;
+      color: var(--neutral-500);
     }
     .modal-card input {
       width: 100%;
       padding: 16px 20px;
       margin-bottom: 20px;
-      border: 1px solid #ddd;
+      border: 1px solid #334155;
       border-radius: 50px;
       font-size: 1rem;
+      background: #0a041a;
+      color: white;
     }
     .contact-icon-row {
       display: flex;
@@ -349,8 +325,8 @@
     }
     .contact-icon-row a {
       text-decoration: none;
-      color: var(--primary-dark);
-      background: #eef2ff;
+      color: var(--accent);
+      background: rgba(139,92,246,0.2);
       padding: 8px 20px;
       border-radius: 40px;
       display: inline-flex;
@@ -358,14 +334,32 @@
       gap: 8px;
     }
     .timing-badge {
-      background: white;
+      background: var(--card-bg);
       padding: 6px 20px;
       border-radius: 40px;
       font-weight: 600;
       display: inline-block;
       margin-right: 12px;
       margin-bottom: 10px;
-      border: 1px solid var(--primary-light);
+      border: 1px solid var(--primary);
+    }
+
+    /* starry hero background */
+    .stars-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(2px 2px at 20% 30%, #fff, rgba(0,0,0,0)),
+                  radial-gradient(3px 3px at 80% 70%, #ffe6b3, rgba(0,0,0,0)),
+                  radial-gradient(1px 1px at 40% 90%, #ffd966, rgba(0,0,0,0)),
+                  radial-gradient(2px 2px at 95% 15%, #fff, rgba(0,0,0,0));
+      background-size: 200px 200px, 300px 300px, 150px 150px, 250px 250px;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+      animation: twinkle 4s infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -381,44 +375,24 @@
   </button>
 </div>
 
-<!-- MOBILE MENU -->
-<div id="mobileMenu" class="mobile-menu">
-  <div class="close-menu" onclick="toggleMenu()">✕</div>
-  <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#programs" onclick="toggleMenu()">Offerings</a>
-  <a href="#reviews" onclick="toggleMenu()">Stories</a>
-  <a href="#contact" onclick="toggleMenu()">Connect</a>
-  <button class="btn-primary open-booking-modal" style="margin-top:20px; width:100%;">✨ Begin Healing</button>
-</div>
-
-<!-- NAVIGATION -->
+<!-- NAVBAR: only brand name, no menu options -->
 <nav class="navbar">
   <div class="nav-container">
-    <div style="font-family: 'Playfair Display'; font-size: 1.8rem; font-weight: 700; color: var(--primary-dark);">Dr. Neeraj <span style="color:var(--accent);">Gupta</span></div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#programs">Offerings</a>
-      <a href="#reviews">Stories</a>
-      <a href="#contact">Connect</a>
-    </div>
-    <div class="nav-cta">
-      <button class="btn-primary open-booking-modal" style="border:none; padding:10px 24px;">Free Discovery Call</button>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">☯</div>
+    <div class="brand">Dr. Neeraj <span>Gupta</span></div>
   </div>
 </nav>
 
-<!-- HERO SECTION -->
-<section style="position: relative; background: #1e2a3a; min-height: 75vh; display: flex; align-items: center; color: white;">
-  <div style="position: absolute; inset:0; background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070&auto=format'); background-size: cover; background-position: center; opacity: 0.4;"></div>
-  <div style="position: absolute; inset:0; background: linear-gradient(135deg, rgba(26,54,93,0.8), rgba(230,180,34,0.3));"></div>
+<!-- HERO SECTION with stars background -->
+<section style="position: relative; background: #030014; min-height: 75vh; display: flex; align-items: center; color: white; overflow: hidden;">
+  <div class="stars-bg"></div>
+  <div style="position: absolute; inset:0; background: radial-gradient(circle at 30% 40%, rgba(44,82,130,0.2), #030014 80%);"></div>
   <div class="container" style="position: relative; z-index: 2;">
     <div style="max-width: 700px;">
       <h1 style="font-size: clamp(2.5rem, 7vw, 4rem);">Heal from Within<br>Awaken Your True Self</h1>
       <p style="font-size: 1.4rem; margin: 24px 0; opacity: 0.9;">Dr. Neeraj Gupta — Spiritual Mentor, Mindfulness Guide, Healer. Jammu & Online</p>
       <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <button class="btn-primary open-booking-modal" style="font-size: 1.1rem; padding: 14px 32px;">🌿 Free Discovery Call</button>
-        <a href="#programs" style="color: white; font-weight: 500; text-decoration: underline;">Explore offerings</a>
+        <button class="btn-primary open-booking-modal" style="font-size: 1.1rem; padding: 14px 32px;">🌿 Discovery Call</button>
+        <a href="#programs" style="color: var(--accent); font-weight: 500; text-decoration: underline;">Explore offerings</a>
       </div>
       <div style="margin-top: 40px;"><span style="color: var(--accent);">★★★★★</span> <span>Trusted by 1,500+ seekers</span></div>
     </div>
@@ -426,7 +400,7 @@
 </section>
 
 <!-- PROGRAMS / OFFERINGS SECTION (4 cards) -->
-<section id="programs" class="section-padding" style="background: var(--neutral-100); scroll-margin-top: 80px;">
+<section id="programs" class="section-padding" style="background: var(--white); scroll-margin-top: 80px;">
   <div class="container">
     <h2 style="font-size: 2.5rem; margin-bottom: 48px;">Spiritual offerings for deep healing</h2>
     <div class="grid-4">
@@ -457,17 +431,17 @@
     </div>
     <!-- additional CTA inside offerings section (different way) -->
     <div style="text-align: center; margin-top: 50px;">
-      <button class="btn-primary open-booking-modal-2" style="background: var(--accent); color: #1e293b;">✨ Book Your First Healing Session (Free)</button>
+      <button class="btn-primary open-booking-modal-2" style="background: var(--accent); color: #0f0a1f;">✨ Book Your First Healing Session</button>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS SECTION: Indian people from specific cities -->
-<section id="reviews" class="section-padding" style="background: white;" scroll-margin-top="70px">
+<section id="reviews" class="section-padding" style="background: var(--neutral-100);" scroll-margin-top="70px">
   <div class="container">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
       <h2 style="font-size: 2.5rem;">Hearts that healed</h2>
-      <span style="background: var(--primary-light); padding: 8px 20px; border-radius: 40px;">⭐ 4.9/5 · 320+ stories</span>
+      <span style="background: var(--primary-light); padding: 8px 20px; border-radius: 40px; color: var(--neutral-900);">⭐ 4.9/5 · 320+ stories</span>
     </div>
     <div class="grid-3">
       <div class="card">
@@ -504,8 +478,8 @@
   </div>
 </section>
 
-<!-- DR. NEERAJ SECTION: image + detailed bio (exactly as provided) -->
-<section id="about" class="section-padding" style="background: var(--primary-light); scroll-margin-top: 70px;">
+<!-- DR. NEERAJ SECTION: image + detailed bio -->
+<section id="about" class="section-padding" style="background: var(--white); scroll-margin-top: 70px;">
   <div class="container">
     <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Meet Dr. Neeraj Gupta</h2>
     <div style="display: flex; gap: 50px; align-items: center; flex-wrap: wrap;">
@@ -513,24 +487,24 @@
         <img src="https://i.ibb.co/Vfh1gMq/Dr-Neeraj-Introduction-image.png" alt="Dr Neeraj Gupta" style="width: 100%; max-width: 360px; border-radius: 32px; box-shadow: var(--shadow-hover); border: 4px solid var(--accent);">
       </div>
       <div style="flex: 2; min-width: 280px;">
-        <h3 style="font-size: 2rem; color: var(--primary-dark);">✨ I’m Dr. Neeraj Gupta</h3>
+        <h3 style="font-size: 2rem; color: var(--accent);">✨ I’m Dr. Neeraj Gupta</h3>
         <p style="margin: 20px 0; line-height: 1.7;">from the foothills of the Himalayas. Despite a successful medical career, I felt unfulfilled—prescriptions only provided temporary relief, not true healing. The question “How can I help people truly heal?” grew louder until I could no longer ignore it. I left my practice to seek a deeper solution.</p>
         <p style="margin-bottom: 16px;">Under my enlightened Master, Dr. Ajay Kotwal, I discovered Spiritual Enlightenment, Mindfulness, Meditation, and Cosmic Consciousness. He taught me: Consciousness is everywhere; you are an ocean of Consciousness.</p>
         <p style="margin-bottom: 16px;">Blending ancient wisdom with modern psychology, I developed holistic tools for healing. Now, I guide individuals to overcome suffering, find peace, and build resilience. Leaving medicine wasn’t easy, but it was right. Today, I don’t just treat symptoms—I empower people to heal from within and transform their lives.</p>
-        <p style="font-style: italic; background: white; padding: 16px 24px; border-radius: 40px;">"Healing begins the moment you decide to listen to your soul." – Dr. Neeraj</p>
+        <p style="font-style: italic; background: var(--card-bg); padding: 16px 24px; border-radius: 40px;">"Healing begins the moment you decide to listen to your soul." – Dr. Neeraj</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ SECTION: 4 general queries (no price/insurance) -->
-<section class="section-padding" style="background: var(--white);">
+<section class="section-padding" style="background: var(--neutral-100);">
   <div class="container" style="max-width: 800px;">
     <h2 style="font-size: 2.5rem; margin-bottom: 40px; text-align: center;">Curious mind?</h2>
     <div class="faq-list">
       <div class="faq-item" style="margin-bottom: 16px;">
         <div class="faq-question" onclick="toggleFaq(this)">I'm new to spirituality — where do I start? <span>▼</span></div>
-        <div class="faq-answer">You start exactly where you are. Dr. Neeraj offers a free discovery call to understand your journey and suggest the best path forward — meditation, mentorship, or energy healing.</div>
+        <div class="faq-answer">You start exactly where you are. Dr. Neeraj offers a discovery call to understand your journey and suggest the best path forward — meditation, mentorship, or energy healing.</div>
       </div>
       <div class="faq-item" style="margin-bottom: 16px;">
         <div class="faq-question" onclick="toggleFaq(this)">Do you offer online sessions? <span>▼</span></div>
@@ -541,19 +515,19 @@
         <div class="faq-answer">Dr. Neeraj blends modern psychological understanding with timeless spiritual wisdom. You’ll receive tools for deep inner transformation, not just symptom management.</div>
       </div>
       <div class="faq-item" style="margin-bottom: 16px;">
-        <div class="faq-question" onclick="toggleFaq(this)">What can I expect in a free discovery call? <span>▼</span></div>
+        <div class="faq-question" onclick="toggleFaq(this)">What can I expect in a discovery call? <span>▼</span></div>
         <div class="faq-answer">A compassionate 30-minute conversation to understand your needs, explain how spiritual healing works, and answer any questions — no pressure, purely supportive.</div>
       </div>
     </div>
     <!-- another CTA inside FAQ (third distinct CTA) -->
     <div style="text-align: center; margin-top: 48px;">
-      <button class="btn-primary open-booking-modal-3" style="background: var(--primary);">💬 Ask Dr. Neeraj — Free Session</button>
+      <button class="btn-primary open-booking-modal-3" style="background: var(--primary);">💬 Ask Dr. Neeraj — Session</button>
     </div>
   </div>
 </section>
 
 <!-- GOOGLE MAP & CONTACT SECTION -->
-<section id="contact" class="section-padding" style="background: var(--neutral-100); scroll-margin-top: 70px;">
+<section id="contact" class="section-padding" style="background: var(--white); scroll-margin-top: 70px;">
   <div class="container">
     <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Visit the healing space</h2>
     <div class="business-address">
@@ -577,7 +551,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="background: #0f172a; color: #cbd5e1; padding: 48px 24px 24px;">
+<footer style="background: #030014; color: #cbd5e1; padding: 48px 24px 24px;">
   <div class="container">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px;">
       <div>
@@ -616,7 +590,7 @@
   <div class="modal-card">
     <span class="modal-close" onclick="closeModal()">&times;</span>
     <h3>Begin your journey 🌼</h3>
-    <p>Share your details, Dr. Neeraj will reach out on WhatsApp to schedule your free session.</p>
+    <p>Share your details, Dr. Neeraj will reach out on WhatsApp to schedule your session.</p>
     <input type="text" id="modalName" placeholder="Your name" required>
     <input type="tel" id="modalWhatsapp" placeholder="WhatsApp number" required>
     <button class="btn-primary" id="sendWhatsAppBtn">Send via WhatsApp</button>
@@ -624,11 +598,6 @@
 </div>
 
 <script>
-  // Toggle mobile menu
-  function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  }
   // FAQ toggle
   function toggleFaq(el) {
     const item = el.closest('.faq-item');
@@ -664,17 +633,12 @@
       return;
     }
     const cleanWA = wa.replace(/[^0-9+]/g, '');
-    const message = `Namaste Dr. Neeraj, I'm ${name} (${cleanWA}). I'm interested in a free discovery call / healing session.`;
+    const message = `Namaste Dr. Neeraj, I'm ${name} (${cleanWA}). I'm interested in a discovery call / healing session.`;
     const url = `https://wa.me/${OWNER_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
     closeModal();
     nameInput.value = '';
     waInput.value = '';
-  });
-
-  // close mobile menu on link click
-  document.querySelectorAll('#mobileMenu a').forEach(link => {
-    link.addEventListener('click', () => document.getElementById('mobileMenu').style.display = 'none');
   });
 </script>
 </body>
