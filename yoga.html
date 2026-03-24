@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Health Hub | Yoga & Wellness Center</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-dark: #0A0A0A;
+      --bg-card: #111111;
+      --surface: #1A1A1A;
+      --gold: #D4AF37;
+      --gold-light: #F5D742;
+      --white: #FFFFFF;
+      --gray-light: #CCCCCC;
+      --gray-mid: #888888;
+      --border: rgba(255,255,255,0.1);
+      --shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--gray-light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: var(--gold);
+      color: #0A0A0A;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(212,175,55,0.3);
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(212,175,55,0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--gold);
+      color: #0A0A0A;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -0.3px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-light);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--gold);
+    }
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--white);
+    }
+    @media (max-width: 860px) {
+      .nav-links {
+        position: fixed;
+        top: 72px;
+        left: -100%;
+        width: 70%;
+        height: calc(100vh - 72px);
+        background: var(--bg-card);
+        flex-direction: column;
+        padding: 40px 28px;
+        gap: 24px;
+        transition: 0.3s;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+        border-right: 1px solid var(--border);
+      }
+      .nav-links.open {
+        left: 0;
+      }
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--white);
+      text-align: center;
+    }
+    .section-sub {
+      color: var(--gray-mid);
+      margin-bottom: 48px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 0;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 140px 20px;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      color: var(--gray-light);
+    }
+
+    /* Cards & Grids */
+    .grid-3, .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: var(--bg-card);
+      border-radius: 24px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      border: 1px solid var(--border);
+      backdrop-filter: blur(4px);
+      transform-style: preserve-3d;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--gold), transparent, var(--gold), transparent);
+      border-radius: 26px;
+      opacity: 0;
+      transition: opacity 0.4s;
+      z-index: -1;
+    }
+    .card:hover::before {
+      opacity: 0.3;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.6);
+      border-color: var(--gold);
+    }
+    .card i {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+    .card p {
+      color: var(--gray-mid);
+    }
+
+    /* Service card with image */
+    .service-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+    .card:hover .service-img {
+      transform: scale(1.02);
+    }
+
+    /* Testimonial location */
+    .testimonial-location {
+      font-size: 0.9rem;
+      color: var(--gold);
+      margin-top: 8px;
+    }
+
+    /* Founder section */
+    .founder-icon {
+      font-size: 6rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Trust strip */
+    .trust-strip {
+      background: var(--surface);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 30px 20px;
+      border-radius: 60px;
+      margin: -60px auto 60px;
+      max-width: 1000px;
+      gap: 20px;
+      border: 1px solid var(--border);
+    }
+    .trust-item {
+      text-align: center;
+      color: var(--gray-light);
+      font-weight: 500;
+    }
+
+    /* Special Offer */
+    .special-offer {
+      background: linear-gradient(135deg, #1F1A0A, #0A0A0A);
+      border-radius: 40px;
+      padding: 60px 40px;
+      text-align: center;
+      border: 1px solid var(--gold);
+      margin-top: 40px;
+      transition: box-shadow 0.3s;
+    }
+    .special-offer:hover {
+      box-shadow: 0 0 20px rgba(212,175,55,0.3);
+    }
+
+    /* FAQ */
+    .faq-item {
+      background: var(--bg-card);
+      border-radius: 16px;
+      margin-bottom: 16px;
+      padding: 20px;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+    .faq-item:hover {
+      border-color: var(--gold);
+    }
+    .faq-question {
+      font-weight: 600;
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: var(--gray-mid);
+      padding-top: 0;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding-top: 16px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+    .modal-content {
+      background: var(--bg-card);
+      max-width: 450px;
+      width: 90%;
+      border-radius: 32px;
+      padding: 32px;
+      border: 1px solid var(--gold);
+    }
+
+    /* Sticky dual CTA (mobile) */
+    .mobile-sticky {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      gap: 12px;
+      z-index: 99;
+    }
+    .mobile-sticky .btn-call, .mobile-sticky .btn-wa {
+      flex: 1;
+      padding: 14px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .btn-call { background: #D32F2F; color: white; }
+    .btn-wa { background: #25D366; color: white; }
+    @media (max-width: 768px) {
+      .mobile-sticky { display: flex; }
+    }
+
+    footer {
+      background: var(--bg-card);
+      padding: 48px 0 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Scroll reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile Sticky Dual CTA -->
+<div class="mobile-sticky">
+  <a href="tel:+919419168378" class="btn-call"><i class="fas fa-phone-alt"></i> Call Now</a>
+  <a href="https://wa.me/919419168378?text=Hello%20I'm%20interested%20in%20yoga%20classes%20at%20Health%20Hub" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-flex">
+    <div class="logo">Health Hub</div>
+    <div class="menu-icon" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#services">Offerings</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero with yoga image -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="container">
+      <h1>Health Hub<br>Where Wellness Begins</h1>
+      <p>Authentic yoga & holistic health in the heart of Gandhi Nagar, Jammu.</p>
+      <button class="btn-primary open-modal-trigger"><i class="fas fa-calendar-alt"></i> Book Free Trial Class</button>
+      <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <span>⭐ 4.9 ★ (50+ reviews)</span>
+        <span>🏆 Certified Yoga School</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="container">
+  <div class="trust-strip">
+    <div class="trust-item"><i class="fas fa-award"></i> Yoga Alliance</div>
+    <div class="trust-item"><i class="fas fa-chalkboard-user"></i> 15+ Years Experience</div>
+    <div class="trust-item"><i class="fas fa-users"></i> 2000+ Happy Clients</div>
+    <div class="trust-item"><i class="fas fa-heart"></i> Holistic Approach</div>
+  </div>
+</div>
+
+<!-- Key Benefits -->
+<section id="benefits">
+  <div class="container">
+    <h2 class="section-title">Why Choose Health Hub</h2>
+    <p class="section-sub">Experience the difference of authentic guidance</p>
+    <div class="grid-3">
+      <div class="card"><i class="fas fa-user-md"></i><h3>Expert Guidance</h3><p>Led by Dr. Neeraj Gupta, combining medical insight with ancient yogic wisdom.</p></div>
+      <div class="card"><i class="fas fa-location-dot"></i><h3>Prime Location</h3><p>Conveniently located in Gandhi Nagar, Jammu – easy access from all sectors.</p></div>
+      <div class="card"><i class="fas fa-child"></i><h3>All Ages Welcome</h3><p>Specialized children's yoga, senior classes, and everything in between.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Signature Offerings with images -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Signature Offerings</h2>
+    <p class="section-sub">Traditional & contemporary practices for every need</p>
+    <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+      <div class="card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hath Yoga">
+        <div class="service-icon"><i class="fas fa-om"></i></div>
+        <h3>Hath Yoga</h3>
+        <p>Classical postures & breathwork for balance and vitality.</p>
+      </div>
+      <div class="card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1593164842264-854448db4a2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vinyasa Flow">
+        <div class="service-icon"><i class="fas fa-wind"></i></div>
+        <h3>Vinyasa Flow</h3>
+        <p>Dynamic sequences linking movement with breath.</p>
+      </div>
+      <div class="card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Power Yoga">
+        <div class="service-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Power Yoga</h3>
+        <p>Strength, endurance, and flexibility in a vigorous flow.</p>
+      </div>
+      <div class="card">
+        <img class="service-img" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Children Yoga">
+        <div class="service-icon"><i class="fas fa-child"></i></div>
+        <h3>Children Yoga</h3>
+        <p>Fun, mindful sessions to build focus and body awareness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials with location names, no people images -->
+<section id="testimonials">
+  <div class="container">
+    <h2 class="section-title">Community Voices</h2>
+    <p class="section-sub">What our neighbors from Gandhi Nagar, Green Belt, Trikuta Nagar & Chandigarh say</p>
+    <div class="grid-3">
+      <div class="card" style="text-align: center;">
+        <i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i>
+        <p style="margin: 16px 0;">"Dr. Neeraj's guidance transformed my health. The atmosphere is serene and authentic."</p>
+        <h4>— R. Sharma</h4>
+        <div class="testimonial-location"><i class="fas fa-map-pin"></i> Gandhi Nagar</div>
+      </div>
+      <div class="card" style="text-align: center;">
+        <i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i>
+        <p>"Best yoga studio in Jammu. The children's yoga class is a blessing for my kids."</p>
+        <h4>— Mrs. Verma</h4>
+        <div class="testimonial-location"><i class="fas fa-map-pin"></i> Green Belt</div>
+      </div>
+      <div class="card" style="text-align: center;">
+        <i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i><i class="fas fa-star" style="color:var(--gold);"></i>
+        <p>"I've practiced Vinyasa here for 2 years. Professional, caring, and results-driven."</p>
+        <h4>— A. Gupta</h4>
+        <div class="testimonial-location"><i class="fas fa-map-pin"></i> Trikuta Nagar</div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 32px;">
+      <div class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Plus many from Chandigarh & surrounding areas</div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet the Founder (Dr Neeraj Gupta) -->
+<section id="founder">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+      <div style="text-align: center;">
+        <div class="founder-icon"><i class="fas fa-lotus"></i></div>
+      </div>
+      <div>
+        <h2 class="section-title" style="text-align:left;">Dr. Neeraj Gupta</h2>
+        <p style="color: var(--gold); margin-bottom: 20px;">Founder & Lead Instructor | MD in Holistic Health</p>
+        <p>With over 15 years of experience, Dr. Neeraj Gupta integrates modern medical knowledge with classical yoga traditions. His personalized approach ensures every student progresses safely. "Yoga is the journey of the self, through the self, to the self."</p>
+        <div style="margin-top: 30px;">
+          <button class="btn-outline open-modal-trigger">Book a session with Dr. Neeraj</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Credentials / Certifications -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Accreditations</h2>
+    <p class="section-sub">Trust & Excellence</p>
+    <div class="grid-4">
+      <div class="card" style="text-align:center;"><i class="fas fa-certificate"></i><h3>Yoga Alliance RYT500</h3><p>Registered School</p></div>
+      <div class="card" style="text-align:center;"><i class="fas fa-award"></i><h3>Best Wellness Center</h3><p>Jammu 2024</p></div>
+      <div class="card" style="text-align:center;"><i class="fas fa-heartbeat"></i><h3>Medical Integration</h3><p>Therapeutic Yoga Certified</p></div>
+      <div class="card" style="text-align:center;"><i class="fas fa-globe"></i><h3>International Association</h3><p>IAYT Member</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Special Offer -->
+<section>
+  <div class="container">
+    <div class="special-offer">
+      <h2 style="font-size:2rem; color: var(--gold);">✨ Free First Class ✨</h2>
+      <p style="margin: 16px 0;">Try any class absolutely free. No commitment, just experience the Health Hub difference.</p>
+      <button class="btn-primary open-modal-trigger"><i class="fab fa-whatsapp"></i> Reserve via WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Location -->
+<section id="contact">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+      <div>
+        <h2 class="section-title" style="text-align:left;">Visit Our Studio</h2>
+        <p><i class="fas fa-map-marker-alt" style="color:var(--gold);"></i> 1st Floor, 200 A/D, Left Lane of Panch Mandir, Gandhi Nagar, Jammu, Jammu and Kashmir 180004</p>
+        <p><i class="fas fa-phone" style="color:var(--gold);"></i> +91 9419168378</p>
+        <p><i class="fab fa-whatsapp" style="color:var(--gold);"></i> +91 9419168378 (WhatsApp)</p>
+        <p><i class="far fa-clock" style="color:var(--gold);"></i> Mon-Sat: 7am–8pm, Sun: 8am–12pm</p>
+        <div style="margin: 30px 0; border-radius: 24px; overflow:hidden;">
+          <iframe width="100%" height="250" style="border:0; filter: grayscale(0.2);" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=1st+Floor+200+A%2FD+Left+Lane+of+Panch+Mandir+Gandhi+Nagar+Jammu&output=embed"></iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/erxKM5Mawy9fdxaU7" target="_blank" class="btn-outline">Open in Google Maps →</a>
+      </div>
+      <div>
+        <h2 class="section-title" style="text-align:left;">Get In Touch</h2>
+        <form id="contactForm">
+          <input type="text" placeholder="Your name" required style="width:100%; padding:14px; margin-bottom:16px; border-radius:40px; background:var(--bg-card); border:1px solid var(--border); color:white;">
+          <input type="email" placeholder="Email" required style="width:100%; padding:14px; margin-bottom:16px; border-radius:40px; background:var(--bg-card); border:1px solid var(--border); color:white;">
+          <textarea placeholder="Your message" rows="3" style="width:100%; padding:14px; border-radius:24px; background:var(--bg-card); border:1px solid var(--border); color:white;"></textarea>
+          <button type="submit" class="btn-primary" style="margin-top: 20px;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Accordion -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Frequently Asked</h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-question">Do I need prior yoga experience? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Not at all. Our beginners' classes are designed for everyone, regardless of experience.</div></div>
+      <div class="faq-item"><div class="faq-question">What should I wear? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Comfortable, stretchable clothing. Mats are available, or bring your own.</div></div>
+      <div class="faq-item"><div class="faq-question">How do I book a free trial? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Click any "Book Free Trial" button, enter your name and WhatsApp, and we'll confirm your slot.</div></div>
+      <div class="faq-item"><div class="faq-question">Do you offer online classes? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes! We have live online sessions. Contact us for details.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="text-align: center;">
+    <div class="logo" style="margin-bottom: 20px;">Health Hub</div>
+    <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 24px;">
+      <a href="#" style="color:var(--gray-mid);"><i class="fab fa-instagram"></i></a>
+      <a href="#" style="color:var(--gray-mid);"><i class="fab fa-facebook"></i></a>
+      <a href="#" style="color:var(--gray-mid);"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p style="font-size:0.8rem;">© 2026 Health Hub – Holistic Wellness Center</p>
+    <p style="font-size:0.7rem; margin-top: 8px;">Designed by Site Studio Jammu</p>
+  </div>
+</footer>
+
+<!-- Modal Popup -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <h3 style="color:var(--gold);">✨ Book Free Trial Class ✨</h3>
+    <p>Enter your details and we'll send a confirmation via WhatsApp.</p>
+    <form id="modalForm">
+      <input type="text" id="modalName" placeholder="Full Name" required style="width:100%; margin:8px 0; padding:12px; border-radius:30px; background:var(--bg-dark); border:1px solid var(--border); color:white;">
+      <input type="tel" id="modalWhatsapp" placeholder="WhatsApp Number (with country code)" required style="width:100%; margin:8px 0; padding:12px; border-radius:30px; background:var(--bg-dark); border:1px solid var(--border); color:white;">
+      <button type="submit" class="btn-primary" style="width:100%; margin-top: 16px;">Send & Open WhatsApp</button>
+    </form>
+    <button id="closeModalBtn" style="margin-top:16px; background:transparent; border:none; color:var(--gray-mid); cursor:pointer;">Close</button>
+  </div>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+  
+  // Modal logic
+  const modal = document.getElementById('contactModal');
+  const openTriggers = document.querySelectorAll('.open-modal-trigger');
+  const closeBtn = document.getElementById('closeModalBtn');
+  
+  function openModal() { modal.style.display = 'flex'; }
+  function closeModalFunc() { modal.style.display = 'none'; }
+  openTriggers.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModalFunc);
+  window.onclick = (e) => { if(e.target === modal) closeModalFunc(); };
+  
+  // Modal form: send to WhatsApp
+  const modalForm = document.getElementById('modalForm');
+  modalForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('modalName').value;
+    const whatsapp = document.getElementById('modalWhatsapp').value;
+    if(!name || !whatsapp) { alert('Please fill name and WhatsApp'); return; }
+    const message = `Hello! I'm ${name}. I want to book a free trial class at Health Hub.`;
+    const url = `https://wa.me/${whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+    closeModalFunc();
+    modalForm.reset();
+  });
+  
+  // Contact form
+  document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('✨ Thank you! We’ll reply within 24 hours.');
+    e.target.reset();
+  });
+  
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+  
+  // Scroll reveal animation
+  const revealElements = document.querySelectorAll('.card, .special-offer, .founder-icon, .grid-4 > div');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  revealElements.forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
