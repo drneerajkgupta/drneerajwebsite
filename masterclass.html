@@ -461,104 +461,14 @@
       transition: 0.2s;
       animation: subtleShake 2s ease-in-out infinite;
       box-shadow: 0 4px 12px rgba(227,52,47,0.4);
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
     }
     .sticky-cta .btn-sticky:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(227,52,47,0.5);
       animation: none;
-    }
-
-    /* ===== MODAL ===== */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1001;
-      visibility: hidden;
-      opacity: 0;
-      transition: 0.2s;
-    }
-    .modal-overlay.active {
-      visibility: visible;
-      opacity: 1;
-    }
-    .modal-container {
-      background: rgba(18,18,18,0.96);
-      backdrop-filter: blur(12px);
-      max-width: 480px;
-      width: 90%;
-      border-radius: 40px;
-      padding: 32px 28px 36px;
-      border: 1px solid rgba(227,52,47,0.3);
-    }
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .modal-header h3 {
-      font-size: 1.8rem;
-      background: linear-gradient(135deg, #fff, #e3342f);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .close-modal {
-      background: none;
-      border: none;
-      font-size: 32px;
-      cursor: pointer;
-      color: #ccc;
-    }
-    .close-modal:hover { color: #e3342f; }
-    .form-group {
-      margin-bottom: 24px;
-    }
-    .form-group label {
-      font-weight: 600;
-      margin-bottom: 8px;
-      display: block;
-      color: #eaeaea;
-    }
-    .form-group input {
-      width: 100%;
-      padding: 14px 20px;
-      background: #1f1f1f;
-      border: 1px solid #3a3a3a;
-      border-radius: 60px;
-      color: #fff;
-      outline: none;
-    }
-    .form-group input:focus {
-      border-color: #e3342f;
-      box-shadow: 0 0 0 3px rgba(227,52,47,0.3);
-    }
-    .submit-wa-btn {
-      background: linear-gradient(105deg, #e3342f, #bc2c28);
-      color: white;
-      border: none;
-      width: 100%;
-      padding: 14px 0;
-      font-weight: 700;
-      border-radius: 60px;
-      cursor: pointer;
-      margin-top: 8px;
-      transition: 0.2s;
-    }
-    .submit-wa-btn:hover { background: linear-gradient(105deg, #bc2c28, #a81f1a); transform: scale(1.02); }
-    .modal-note {
-      font-size: 0.8rem;
-      text-align: center;
-      margin-top: 18px;
-      color: #aaa;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -626,7 +536,7 @@
     </div>
 
     <!-- ===== CTA ===== -->
-    <a href="#" class="btn-register register-trigger">📅 Book Your 1:1 Session – Just ₹49</a>
+    <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-register">📅 Book Your 1:1 Session – Just ₹49</a>
     <p style="font-size:0.9rem; color:#aaa; margin-top: -4px;">* Limited slots available at this introductory price</p>
 
     <!-- ===== VIDEO PLACEHOLDER (YouTube) ===== -->
@@ -645,11 +555,6 @@
           <wistia-player media-id="roz9vd4sg9" aspect="0.5625"></wistia-player>
         </div>
         <div class="review-text">"Dr. Neeraj's guidance has been truly life-changing. I feel more peaceful and in control."</div>
-        <div class="review-author">- Testimonial 1</div>
-        <div class="review-location">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          Watch on Wistia
-        </div>
       </div>
 
       <!-- Review 2 -->
@@ -658,11 +563,6 @@
           <wistia-player media-id="njmuayv1p3" aspect="0.5625"></wistia-player>
         </div>
         <div class="review-text">"I was struggling with anxiety for years. Dr. Neeraj's holistic approach gave me my life back."</div>
-        <div class="review-author">- Testimonial 2</div>
-        <div class="review-location">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          Watch on Wistia
-        </div>
       </div>
 
       <!-- Review 3 -->
@@ -671,11 +571,6 @@
           <wistia-player media-id="geka6bv4qc" aspect="0.5625"></wistia-player>
         </div>
         <div class="review-text">"The clarity and confidence I gained after just a few sessions is unbelievable. Highly recommend!"</div>
-        <div class="review-author">- Testimonial 3</div>
-        <div class="review-location">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          Watch on Wistia
-        </div>
       </div>
     </div>
 
@@ -834,71 +729,11 @@
     <div class="price">
       <span>₹49</span> <del>₹2,499</del> &nbsp;– Limited Offer
     </div>
-    <button class="btn-sticky register-trigger">📅 Book Your Session</button>
+    <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-sticky">📅 Book Your Session</a>
   </div>
 
-  <!-- ===== MODAL ===== -->
-  <div id="coachModal" class="modal-overlay">
-    <div class="modal-container">
-      <div class="modal-header">
-        <h3>✨ Book Your ₹49 Session</h3>
-        <button class="close-modal" id="closeModalBtn">×</button>
-      </div>
-      <form id="waRegistrationForm">
-        <div class="form-group">
-          <label>📛 Your Full Name</label>
-          <input type="text" id="userName" placeholder="e.g., Priya Sharma" required />
-        </div>
-        <div class="form-group">
-          <label>📱 WhatsApp Number</label>
-          <input type="tel" id="userWhatsapp" placeholder="e.g., 9876543210" required />
-        </div>
-        <button type="submit" class="submit-wa-btn">📩 Send details via WhatsApp</button>
-        <div class="modal-note">
-          Your info will be shared with Dr. Neeraj on WhatsApp. You'll be redirected to chat.
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- ===== SCRIPTS ===== -->
+  <!-- ===== SCRIPTS (Only FAQ) ===== -->
   <script>
-    // Config – replace with your actual WhatsApp number (without +)
-    const DOCTOR_WHATSAPP = "917006487936";
-    const modal = document.getElementById('coachModal');
-    const closeBtn = document.getElementById('closeModalBtn');
-    const form = document.getElementById('waRegistrationForm');
-    const nameInp = document.getElementById('userName');
-    const waInp = document.getElementById('userWhatsapp');
-
-    // Open modal on any .register-trigger click
-    document.querySelectorAll('.register-trigger').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
-        nameInp.value = '';
-        waInp.value = '';
-      });
-    });
-
-    // Close modal
-    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
-
-    // Form submit -> WhatsApp
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let name = nameInp.value.trim();
-      let wa = waInp.value.trim();
-      if (!name) return alert('Please enter your full name');
-      if (!wa) return alert('Please enter WhatsApp number');
-      let msg = `🌟 NEW BOOKING ENQUIRY (₹49 Session) %0A%0A📛 Name: ${encodeURIComponent(name)}%0A📱 WhatsApp: ${encodeURIComponent(wa)}%0A%0A🙏 Interested in 1:1 counselling session. Please confirm slot.`;
-      window.open(`https://wa.me/${DOCTOR_WHATSAPP}?text=${msg}`, '_blank');
-      setTimeout(() => modal.classList.remove('active'), 800);
-      nameInp.value = '';
-      waInp.value = '';
-    });
-
     // FAQ accordion
     document.querySelectorAll('.faq-item').forEach(item => {
       item.querySelector('.faq-question')?.addEventListener('click', () => {
