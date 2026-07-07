@@ -281,6 +281,7 @@
       position: relative;
       cursor: pointer;
       transition: 0.3s;
+      overflow: hidden;
     }
     .review-card .video-thumb:hover {
       border-color: #e3342f;
@@ -295,6 +296,13 @@
       border-radius: 50%;
       padding: 12px 16px;
       font-size: 2.5rem;
+      color: #e3342f;
+    }
+    .review-card .video-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
     }
     .review-card .review-text {
       font-style: italic;
@@ -307,6 +315,10 @@
     .review-card .review-location {
       color: #77b9ff;
       font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
     }
     .review-card .stars {
       color: #f4c542;
@@ -637,35 +649,44 @@
       -->
     </div>
 
-    <!-- ===== VIDEO REVIEWS ===== -->
+    <!-- ===== VIDEO REVIEWS (Updated with your YouTube Shorts) ===== -->
     <h2>🎬 Video Reviews</h2>
     <div class="reviews-grid">
       <div class="review-card">
-        <div class="video-thumb" onclick="alert('Play video review 1')">
-          ▶
+        <div class="video-thumb" onclick="window.open('https://youtube.com/shorts/OxRI0Gbamso?si=vzFtlR8Ce_GRnErn', '_blank')">
+          <img src="https://i.ytimg.com/vi/OxRI0Gbamso/hq2.jpg" alt="Testimonial 1 thumbnail" />
           <div class="play-overlay">▶</div>
         </div>
-        <div class="review-text">“Dr. Neeraj’s approach is life-changing. I felt heard and guided.”</div>
-        <div class="review-author">- Priya Sharma</div>
-        <div class="review-location">Delhi</div>
+        <div class="review-text">“Dr. Neeraj’s guidance has been truly life-changing. I feel more peaceful and in control.”</div>
+        <div class="review-author">- Testimonial 1</div>
+        <div class="review-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Watch on YouTube
+        </div>
       </div>
       <div class="review-card">
-        <div class="video-thumb" onclick="alert('Play video review 2')">
-          ▶
+        <div class="video-thumb" onclick="window.open('https://youtube.com/shorts/iCBxC1i12Po?si=ysbKDFMKkBJ-6Rlq', '_blank')">
+          <img src="https://i.ytimg.com/vi/iCBxC1i12Po/hq2.jpg" alt="Testimonial 2 thumbnail" />
           <div class="play-overlay">▶</div>
         </div>
-        <div class="review-text">“After just 3 sessions, my anxiety reduced drastically. Highly recommend.”</div>
-        <div class="review-author">- Rahul Verma</div>
-        <div class="review-location">Mumbai</div>
+        <div class="review-text">“I was struggling with anxiety for years. Dr. Neeraj’s holistic approach gave me my life back.”</div>
+        <div class="review-author">- Testimonial 2</div>
+        <div class="review-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Watch on YouTube
+        </div>
       </div>
       <div class="review-card">
-        <div class="video-thumb" onclick="alert('Play video review 3')">
-          ▶
+        <div class="video-thumb" onclick="window.open('https://youtube.com/shorts/67Bf2DTZjMc?si=pdcOFJeZL3w2rv9B', '_blank')">
+          <img src="https://i.ytimg.com/vi/67Bf2DTZjMc/hq2.jpg" alt="Testimonial 3 thumbnail" />
           <div class="play-overlay">▶</div>
         </div>
-        <div class="review-text">“I finally feel at peace. Dr. Neeraj’s guidance is invaluable.”</div>
-        <div class="review-author">- Ananya Mehta</div>
-        <div class="review-location">Bangalore</div>
+        <div class="review-text">“The clarity and confidence I gained after just a few sessions is unbelievable. Highly recommend!”</div>
+        <div class="review-author">- Testimonial 3</div>
+        <div class="review-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Watch on YouTube
+        </div>
       </div>
     </div>
 
