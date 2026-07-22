@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Executive Clarity Call – Dr. Neeraj</title>
-    <meta name="description" content="Free 1:1 Executive Clarity Call with Dr. Neeraj. Eliminate stress at the root and regain mental clarity." />
+    <title>Executive Clarity Call – Dr. Neeraj K Gupta</title>
+    <meta name="description" content="1:1 Executive Clarity Call with Dr. Neeraj K Gupta. Eliminate stress at the root and regain mental clarity." />
 
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,8 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','432839631351321');fbq('track','PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=432839631351321&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <style>
-        /* ===== RESET & BASE (from reference) ===== */
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +31,6 @@
             background: #000B11;
             color: #eaeef2;
             line-height: 1.5;
-            padding-top: 70px;
             scroll-behavior: smooth;
         }
         ::-webkit-scrollbar {
@@ -36,53 +42,6 @@
         ::-webkit-scrollbar-thumb {
             background: #e3342f;
             border-radius: 10px;
-        }
-
-        /* ===== NAV (fixed) ===== */
-        .fixed-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(227, 52, 47, 0.3);
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 28px;
-        }
-        .logo-img {
-            height: 48px;
-            width: auto;
-            border-radius: 14px;
-            transition: 0.3s;
-            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
-        }
-        .logo-img:hover {
-            transform: scale(1.03);
-            filter: drop-shadow(0 4px 12px rgba(227, 52, 47, 0.3));
-        }
-        .nav-cta {
-            background: #e3342f;
-            color: #fff;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-        .nav-cta:hover {
-            background: #c72520;
-            transform: scale(1.03);
         }
 
         /* ===== PAGE CONTAINER ===== */
@@ -145,8 +104,7 @@
         }
 
         /* ===== IMAGES ===== */
-        .cover-img,
-        .section-img {
+        .cover-img {
             width: 100%;
             max-width: 100%;
             height: auto;
@@ -161,73 +119,22 @@
             border-color: rgba(227, 52, 47, 0.4);
         }
 
-        /* ===== MISSION BOX ===== */
-        .mission-box {
-            background: linear-gradient(145deg, #1e1e1e, #141414);
-            border-radius: 28px;
-            padding: 28px 32px;
-            border: 1px solid #2c2c2c;
-            margin: 24px 0 16px;
-            position: relative;
-            overflow: hidden;
-            border-left: 6px solid #e3342f;
-        }
-        .mission-box::after {
-            content: "✨";
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-            font-size: 4rem;
-            opacity: 0.08;
-            pointer-events: none;
-        }
-        .mission-box p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: #e2e8f0;
-            margin-bottom: 0;
-        }
-        .mission-box strong {
-            color: #fff;
-        }
-        .mission-box .highlight {
-            color: #e3342f;
-            font-weight: 600;
-        }
-
-        /* ===== REASON BOX ===== */
-        .reason-box {
-            background: linear-gradient(145deg, #1e1e1e, #141414);
-            border-radius: 28px;
-            padding: 30px 35px;
-            border-left: 6px solid #e3342f;
-            margin: 30px 0 20px;
-            border: 1px solid #2c2c2c;
-            border-left-width: 6px;
-        }
-        .reason-box h3 {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 12px;
-        }
-        .reason-box ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
-        .reason-box ul li {
-            padding-left: 28px;
-            position: relative;
-            margin-bottom: 12px;
-            color: #cbd5e6;
-            font-size: 1.02rem;
-        }
-        .reason-box ul li::before {
-            content: "✓";
-            color: #25D366;
-            position: absolute;
-            left: 0;
-            font-weight: 700;
+        /* ===== GLOWING HEADLINE ===== */
+        .glow-headline {
+            background: linear-gradient(135deg, #f9e05d 70%, #f5a623 100%);
+            color: #1e1e2a;
+            font-weight: 800;
+            font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 30px rgba(249, 224, 93, 0.3);
+            width: 100%;
+            max-width: 800px;
         }
 
         /* ===== BUTTONS ===== */
@@ -277,6 +184,19 @@
             animation: none;
         }
 
+        .price-cut {
+            text-decoration: line-through;
+            color: #888;
+            font-weight: 400;
+            font-size: 0.9rem;
+            margin-right: 8px;
+        }
+        .price-new {
+            color: #25D366;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
         /* ===== COMPARISON GRID ===== */
         .comparison-grid {
             display: grid;
@@ -312,112 +232,163 @@
         }
 
         /* ===== YES QUESTIONS ===== */
-        .yes-grid {
+        .yes-grid-new {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px 30px;
-            margin: 30px 0;
+            gap: 16px 24px;
+            margin: 24px 0 16px;
         }
-        .yes-item {
+        .yes-item-new {
             background: rgba(20, 20, 20, 0.8);
-            padding: 16px 22px;
+            padding: 14px 20px;
             border-radius: 14px;
             border: 1px solid #2a2a2a;
             display: flex;
             align-items: center;
             gap: 14px;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 500;
             color: #e2e8f0;
             transition: 0.2s;
         }
-        .yes-item:hover {
+        .yes-item-new:hover {
             transform: translateX(4px);
             border-color: #e3342f;
         }
-        .yes-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
+        .yes-item-new input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
             accent-color: #e3342f;
             flex-shrink: 0;
             cursor: pointer;
         }
-        .yes-item label {
+        .yes-item-new label {
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 10px;
             width: 100%;
         }
-        .yes-item label i {
+        .yes-item-new label i {
             color: #e3342f;
+            font-size: 1.1rem;
+        }
+
+        .filter-note {
+            background: rgba(227, 52, 47, 0.10);
+            border-radius: 14px;
+            padding: 16px 24px;
+            border-left: 4px solid #e3342f;
+            margin: 12px 0 20px;
+            font-size: 1.05rem;
+            color: #e2e8f0;
+        }
+        .filter-note strong {
+            color: #25D366;
+        }
+
+        /* ===== REASONS GRID (4 groups) ===== */
+        .reasons-grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 30px;
+            margin: 20px 0 30px;
+        }
+        .reason-group-box {
+            background: rgba(20, 20, 20, 0.7);
+            border-radius: 20px;
+            padding: 20px 24px;
+            border: 1px solid #2a2a2a;
+            border-left: 4px solid #e3342f;
+        }
+        .reason-group-box h4 {
+            color: #e3342f;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .reason-group-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .reason-group-box ul li {
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 6px;
+            font-size: 0.92rem;
+            color: #cbd5e6;
+        }
+        .reason-group-box ul li::before {
+            content: "•";
+            color: #e3342f;
+            position: absolute;
+            left: 0;
+            font-weight: 700;
             font-size: 1.2rem;
         }
 
-        /* ===== REASONS GRID (20 reasons) ===== */
-        .reasons-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px 30px;
-            margin: 24px 0 30px;
-        }
-        .reason-item {
+        /* ===== WHO / WHAT (STACKED) ===== */
+        .who-what-stack {
             display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            font-size: 1rem;
-            color: #e2e8f0;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-        }
-        .reason-item .num {
-            flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            background: #e3342f;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: #fff;
-            margin-top: 2px;
-        }
-        .reason-item strong {
-            color: #fff;
-        }
-
-        /* ===== TWO COLUMN ===== */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            flex-direction: column;
+            gap: 24px;
             margin: 30px 0;
         }
-        .col-box {
+        .who-what-card {
             background: rgba(20, 20, 20, 0.8);
             border-radius: 28px;
-            padding: 28px;
+            padding: 28px 32px;
             border: 1px solid #2a2a2a;
+            border-top: 4px solid #e3342f;
         }
-        .col-box h4 {
+        .who-what-card h4 {
             font-size: 1.3rem;
             color: #fff;
             margin-bottom: 14px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
-        .col-box h4 i {
+        .who-what-card h4 i {
             color: #e3342f;
         }
-        .col-box ul li {
-            padding-left: 28px;
+        .who-what-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 24px;
         }
-        .col-box ul li::before {
+        .who-what-card ul li {
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: #cbd5e6;
+            break-inside: avoid;
+        }
+        .who-what-card ul li::before {
             content: "▹";
             color: #e3342f;
+            position: absolute;
+            left: 0;
+        }
+        .who-what-card .note {
+            font-size: 0.92rem;
+            color: #aaa;
+            font-style: italic;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .who-what-card .note i {
+            color: #e3342f;
+            margin-right: 6px;
         }
 
         /* ===== MENTOR SECTION ===== */
@@ -456,10 +427,18 @@
             color: #e3342f;
             font-weight: 600;
             font-size: 1.05rem;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
         .mentor-wrap .mentor-info p {
             color: #cbd5e6;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .mentor-wrap .mentor-info .bio-short {
+            color: #cbd5e6;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 95%;
         }
         .cred-badge {
             display: inline-block;
@@ -475,49 +454,6 @@
         .cred-badge i {
             color: #e3342f;
             margin-right: 4px;
-        }
-
-        /* ===== VIDEO CONTAINER ===== */
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 28px;
-            overflow: hidden;
-            margin: 30px 0;
-            background: #111;
-            border: 1px solid rgba(227, 52, 47, 0.3);
-        }
-        .video-container iframe,
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 28px;
-            border: 0;
-        }
-        .video-headline {
-            font-size: clamp(1.6rem, 4.5vw, 2.8rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #f9e05d 0%, #f5a623 50%, #e3342f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 40px 0 8px;
-            text-shadow: 0 0 40px rgba(227, 52, 47, 0.15);
-            text-align: center;
-        }
-        .video-subhead {
-            font-size: clamp(0.95rem, 1.3vw, 1.2rem);
-            color: #9aaeb9;
-            margin-bottom: 24px;
-            text-align: center;
-            font-weight: 400;
-            letter-spacing: 0.3px;
         }
 
         /* ===== REVIEWS ===== */
@@ -553,11 +489,6 @@
         .review-card .review-author {
             font-weight: 700;
             color: #fff;
-        }
-        .review-card .review-role {
-            color: #77b9ff;
-            font-size: 0.9rem;
-            margin-top: 4px;
         }
 
         /* ===== BONUSES ===== */
@@ -629,60 +560,112 @@
         }
 
         /* ===== CREDIBILITY STRIP ===== */
-        .cred-strip {
+        .cred-strip-new {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 24px 48px;
-            padding: 20px 0 10px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
             border-top: 1px solid rgba(227, 52, 47, 0.15);
             border-bottom: 1px solid rgba(227, 52, 47, 0.15);
-            margin: 10px 0 24px;
+            margin: 16px 0 24px;
+            gap: 12px;
         }
-        .cred-strip .item {
+        .cred-group {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .cred-item {
             display: flex;
             align-items: center;
             gap: 10px;
             font-size: 1rem;
             color: #cbd5e6;
         }
-        .cred-strip .item .num {
+        .cred-item .num {
             font-weight: 700;
             color: #e3342f;
             font-size: 1.3rem;
         }
-        .cred-strip .item i {
+        .cred-item i {
             color: #e3342f;
             font-size: 1.2rem;
+        }
+
+        /* ===== DOCTOR BANNER ===== */
+        .doctor-banner {
+            margin: 10px 0 24px;
+            text-align: center;
+        }
+        .doctor-banner img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 28px;
+            border: 1px solid rgba(227, 52, 47, 0.2);
+            box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+        }
+        .doctor-banner img:hover {
+            transform: scale(1.01);
+            border-color: rgba(227, 52, 47, 0.4);
+        }
+        .doctor-banner .caption {
+            margin-top: 10px;
+            color: #cbd5e6;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .doctor-banner .caption strong {
+            color: #fff;
+        }
+
+        /* ===== WHY JOIN (REDESIGNED) ===== */
+        .why-join-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 30px;
+            margin: 20px 0;
+        }
+        .why-join-card {
+            background: rgba(20, 20, 20, 0.7);
+            border-radius: 20px;
+            padding: 24px 28px;
+            border: 1px solid #2a2a2a;
+            border-left: 4px solid #e3342f;
+            transition: 0.3s;
+        }
+        .why-join-card:hover {
+            border-color: #e3342f;
+            transform: translateY(-2px);
+        }
+        .why-join-card .icon-big {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .why-join-card h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .why-join-card p {
+            color: #cbd5e6;
+            font-size: 0.95rem;
+            margin-bottom: 0;
         }
 
         /* ===== FOOTER ===== */
         .main-footer {
             margin-top: 40px;
-            border-top: 1px solid rgba(227, 52, 47, 0.3);
-            padding: 44px 0 24px;
-        }
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-        .footer-address h4 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        .footer-address p {
-            color: #cbd5e6;
+            border-top: 1px solid rgba(227, 52, 47, 0.2);
+            padding: 30px 0 20px;
+            text-align: center;
         }
         .footer-bottom {
-            text-align: center;
-            padding-top: 24px;
-            border-top: 1px solid #252525;
             font-size: 0.85rem;
-            color: #aaa;
+            color: #888;
         }
         .footer-bottom a {
             color: #e3342f;
@@ -730,20 +713,6 @@
             animation: none;
         }
 
-        /* ===== UPPER HEADLINE (top urgency) ===== */
-        .top-urgency {
-            background: #0d1117;
-            color: #e2e8f0;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            border-bottom: 2px solid #e3342f;
-            margin-bottom: 20px;
-        }
-        .top-urgency strong {
-            color: #e3342f;
-        }
-
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .page {
@@ -755,19 +724,16 @@
             h2 {
                 font-size: 1.6rem;
             }
-            .nav-container {
-                padding: 8px 16px;
-            }
             .comparison-grid {
                 grid-template-columns: 1fr;
             }
-            .reasons-grid {
+            .reasons-grid-4 {
                 grid-template-columns: 1fr;
             }
-            .yes-grid {
+            .yes-grid-new {
                 grid-template-columns: 1fr;
             }
-            .two-col {
+            .who-what-card ul {
                 grid-template-columns: 1fr;
             }
             .sticky-cta {
@@ -779,15 +745,24 @@
                 padding: 14px 24px;
                 font-size: 1rem;
             }
-            .video-headline {
-                font-size: 1.6rem;
-            }
             .mentor-wrap {
                 flex-direction: column;
                 text-align: center;
             }
             .mentor-wrap .mentor-img {
                 flex: 0 0 auto;
+            }
+            .cred-strip-new {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            .cred-group {
+                justify-content: center;
+                gap: 20px;
+            }
+            .why-join-grid {
+                grid-template-columns: 1fr;
             }
         }
         @media (max-width: 480px) {
@@ -797,235 +772,209 @@
             .bonus-grid {
                 flex-direction: column;
             }
+            .cred-group {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== NAV ===== -->
-    <nav class="fixed-nav">
-        <div class="nav-container">
-            <a href="#" class="logo-link">
-                <img class="logo-img" src="https://i.ibb.co/ZR67RKn8/IMG-20241223-203952-171.webp" alt="Dr. Neeraj Wellness Logo" />
-            </a>
-            <a href="#apply" class="nav-cta"><i class="fas fa-calendar-check"></i> Book Free Call</a>
-        </div>
-    </nav>
-
     <!-- ===== MAIN PAGE ===== -->
     <div class="page">
 
-        <!-- ===== TOP URGENCY ===== -->
-        <div class="top-urgency">
-            <i class="fas fa-clock" style="color:#e3342f;margin-right:8px;"></i>
-            <strong>Limited Availability:</strong> Only a few private sessions remain this week.
-            <span style="display:inline-block;margin-left:12px;font-weight:600;">Apply now →</span>
+        <!-- ===== HERO ===== -->
+        <div style="text-align: center; margin-bottom: 12px;">
+            <div class="glow-headline">
+                <i class="fas fa-bolt" style="margin-right:8px;"></i> ATTENTION! CORPORATE PROFESSIONALS, FOUNDERS, DOCTORS &amp; BUSINESS OWNERS
+            </div>
         </div>
 
-        <!-- ===== HERO IMAGE (placeholder) ===== -->
-        <img class="cover-img" src="https://i.ibb.co/gMPSJydf/a98547-470b9a129bc4432ba40ea9a6dc9c2839-mv2.jpg" alt="Dr. Neeraj - Executive Clarity Call" />
-
-        <!-- ===== UPPER HEADLINES ===== -->
-        <div style="display:flex;flex-wrap:wrap;gap:6px 16px;margin-bottom:8px;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;color:#e3342f;font-weight:600;">
-            <span><i class="fas fa-user-tie" style="margin-right:4px;"></i> FOR SENIOR CORPORATE PROFESSIONALS, FOUNDERS, DOCTORS &amp; BUSINESS OWNERS</span>
-            <span><i class="fas fa-arrow-right" style="margin-right:4px;"></i> WHO LOOK SUCCESSFUL BUT FEEL MENTALLY EXHAUSTED</span>
-        </div>
-        <div style="background:rgba(227,52,47,0.12);padding:12px 20px;border-radius:10px;border-left:4px solid #e3342f;margin-bottom:20px;">
-            <p style="font-size:0.95rem;font-weight:600;color:#cbd5e6;margin:0;">
-                <i class="fas fa-exclamation-triangle" style="color:#e3342f;margin-right:8px;"></i>
-                IF CHRONIC STRESS, BURNOUT, OVERTHINKING, OR WORK PRESSURE IS AFFECTING YOUR HEALTH, RELATIONSHIPS, OR PERFORMANCE, THIS PRIVATE 1:1 STRATEGY SESSION IS FOR YOU.
-            </p>
-        </div>
-
-        <!-- ===== MAIN HEADLINE ===== -->
-        <h1>
-            Eliminate Stress at the Root, <span class="gradient-sub">Regain Mental Clarity</span>, and Create a Life of Success Without Sacrificing Your Health, Family, or Peace of Mind.
+        <h1 style="text-align: center; font-size: 2.8rem; margin-bottom: 20px;">
+            Eliminate Chronic Stress &amp; Burnout in 90 Days<br />
+            <span style="background: linear-gradient(135deg, #fff, #e3342f); background-clip: text; -webkit-background-clip: text; color: transparent;">Without Compromising Your Career, Family, or Success</span>
         </h1>
 
-        <!-- ===== SUBHEADLINE ===== -->
-        <p style="font-size:1.15rem;color:#cbd5e6;max-width:90%;margin-bottom:12px;">
-            Join an exclusive <strong>1:1 Executive Clarity Call</strong> with Dr. Neeraj, a psychologist with over 20 years of experience who has helped more than 1,000 individuals overcome stress, burnout, anxiety, relationship challenges, and emotional overwhelm through his proven <strong>Freedom Wellness Model™</strong>.
+        <p style="font-size: 1.2rem; color: #cbd5e6; text-align: center; max-width: 90%; margin: 0 auto 20px;">
+            Join an exclusive <strong>1:1 Executive Clarity Call</strong> with <strong>Dr. Neeraj K Gupta</strong>, a Doctor with <strong>25+ years' experience</strong>, helping <strong>5000+ people</strong> overcome stress, burnout, anxiety, relationship challenges, using the <strong>FREEDOM WELLNESS MODEL</strong>.
         </p>
 
         <!-- ===== CREDIBILITY STRIP ===== -->
-        <div class="cred-strip">
-            <div class="item"><i class="fas fa-clock"></i> <span class="num">20+</span> Years Experience</div>
-            <div class="item"><i class="fas fa-users"></i> <span class="num">1,000+</span> Clients Helped</div>
-            <div class="item"><i class="fas fa-check-circle"></i> <span class="num">100%</span> Confidential</div>
-            <div class="item"><i class="fas fa-trophy"></i> <span class="num">15,000+</span> Seminar Attendees</div>
+        <div class="cred-strip-new">
+            <div class="cred-group">
+                <div class="cred-item"><i class="fas fa-clock"></i> <span class="num">25+</span> Years Experience</div>
+                <div class="cred-item"><i class="fas fa-users"></i> <span class="num">5,000+</span> Lives Transformed</div>
+            </div>
+            <div class="cred-group">
+                <div class="cred-item"><i class="fas fa-shield-alt"></i> <span class="num">100%</span> Confidential</div>
+                <div class="cred-item"><i class="fas fa-trophy"></i> <span class="num">15,000+</span> Seminar Attendees</div>
+            </div>
+        </div>
+
+        <!-- ===== DOCTOR IMAGE ===== -->
+        <div class="doctor-banner">
+            <img src="https://i.ibb.co/gMPSJydf/a98547-470b9a129bc4432ba40ea9a6dc9c2839-mv2.jpg" alt="Dr. Neeraj K Gupta" />
+            <div class="caption">
+                <strong>Dr. Neeraj K Gupta</strong> — Personally guiding you to lasting peace
+            </div>
         </div>
 
         <!-- ===== CTA ===== -->
-        <div style="margin:20px 0 16px;">
-            <a href="#apply" class="btn-register"><i class="fas fa-calendar-check" style="margin-right:10px;"></i> Book Your Free Executive Clarity Call</a>
+        <div style="text-align: center; margin: 10px 0 20px;">
+            <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-register">
+                <i class="fas fa-calendar-check" style="margin-right:10px;"></i> Book Your 1:1 Clarity Call – <span class="price-cut">₹2499</span> <span class="price-new">₹49</span>
+            </a>
             <p style="font-size:0.85rem;color:#888;margin-top:6px;">
                 <i class="fas fa-shield-alt" style="color:#e3342f;margin-right:4px;"></i>
-                Only a limited number of private sessions are available each week to ensure every participant receives personal attention.
+                Only a limited number of private sessions are available each week.
             </p>
         </div>
 
         <!-- ===== WHY JOIN ===== -->
         <h2>Why You Should Join This <span class="gradient-sub">1:1 Executive Clarity Call</span></h2>
-        <div class="mission-box">
-            <p>
-                <strong>This is not another motivational session.</strong> This is not generic counselling. This is not a sales presentation disguised as coaching.
-            </p>
-        </div>
-        <p style="font-size:1.05rem;color:#e2e8f0;margin-bottom:12px;">
-            During this confidential one-to-one session, Dr. Neeraj will help you uncover the hidden patterns that are keeping you stressed, mentally exhausted, and emotionally stuck despite your professional success.
-        </p>
-        <div class="comparison-grid" style="grid-template-columns:1fr 1fr; gap:20px;">
-            <div class="compare-box gain" style="border-left-color:#e3342f;">
-                <h3>By the end of the session, you will walk away with:</h3>
-                <ul>
-                    <li>A clear understanding of the real causes behind your stress and emotional exhaustion.</li>
-                    <li>A personalized roadmap for restoring mental clarity and emotional balance.</li>
-                    <li>Practical strategies to improve focus, confidence, relationships, and overall well-being.</li>
-                    <li>Greater awareness of what is preventing lasting change.</li>
-                    <li>A clear next step based on your personal situation.</li>
-                </ul>
-                <p style="margin-top:12px;color:#cbd5e6;font-style:italic;">
-                    Whether you decide to work with us or not, you will leave with valuable insights that can positively impact your personal and professional life.
-                </p>
+
+        <div class="why-join-grid">
+            <div class="why-join-card">
+                <span class="icon-big">🧠</span>
+                <h4>Clear Understanding</h4>
+                <p>Uncover the real causes behind your stress and emotional exhaustion.</p>
             </div>
-            <div class="compare-box pain" style="border-left-color:#e3342f;">
-                <h3>Book Your Private Session</h3>
-                <p style="color:#cbd5e6;">Before all available slots are filled.</p>
-                <a href="#apply" class="btn-register" style="margin-top:12px;display:inline-block;padding:12px 28px;font-size:1rem;">Reserve Your Spot Now</a>
+            <div class="why-join-card">
+                <span class="icon-big">🗺️</span>
+                <h4>Personalized Roadmap</h4>
+                <p>Walk away with a step-by-step plan for mental clarity and emotional balance.</p>
+            </div>
+            <div class="why-join-card">
+                <span class="icon-big">⚡</span>
+                <h4>Practical Strategies</h4>
+                <p>Improve focus, confidence, relationships, and overall well-being — starting today.</p>
+            </div>
+            <div class="why-join-card">
+                <span class="icon-big">🔍</span>
+                <h4>Greater Awareness</h4>
+                <p>Understand what's preventing lasting change and how to break through.</p>
+            </div>
+            <div class="why-join-card" style="grid-column:1/-1;border-left-color:#25D366;">
+                <span class="icon-big">🎯</span>
+                <h4>Clear Next Steps</h4>
+                <p>Whether you decide to work with us or not, you'll leave with actionable insights that can positively impact your personal and professional life.</p>
             </div>
         </div>
 
-        <!-- ===== CALL DETAILS ===== -->
-        <h2>Executive Clarity Call <span class="gradient-sub">Details</span></h2>
-        <div style="background:rgba(20,20,20,0.8);border-radius:28px;padding:30px 35px;border:1px solid #2a2a2a;display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;margin:20px 0;">
-            <div style="display:flex;align-items:center;gap:16px;">
-                <i class="fas fa-video" style="color:#e3342f;font-size:1.4rem;width:30px;"></i>
-                <div><span style="color:#aaa;font-size:0.8rem;display:block;">Session Format</span><span style="color:#fff;font-weight:600;">Private 1:1 Online</span></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:16px;">
-                <i class="fas fa-clock" style="color:#e3342f;font-size:1.4rem;width:30px;"></i>
-                <div><span style="color:#aaa;font-size:0.8rem;display:block;">Duration</span><span style="color:#fff;font-weight:600;">45–60 Minutes</span></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:16px;">
-                <i class="fas fa-laptop" style="color:#e3342f;font-size:1.4rem;width:30px;"></i>
-                <div><span style="color:#aaa;font-size:0.8rem;display:block;">Platform</span><span style="color:#fff;font-weight:600;">Google Meet / Zoom</span></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:16px;">
-                <i class="fas fa-gift" style="color:#e3342f;font-size:1.4rem;width:30px;"></i>
-                <div><span style="color:#aaa;font-size:0.8rem;display:block;">Investment</span><span style="color:#fff;font-weight:600;">Complimentary <span style="font-weight:400;color:#888;font-size:0.85rem;">(By Application)</span></span></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:16px;">
-                <i class="fas fa-calendar-alt" style="color:#e3342f;font-size:1.4rem;width:30px;"></i>
-                <div><span style="color:#aaa;font-size:0.8rem;display:block;">Availability</span><span style="color:#fff;font-weight:600;">Mon–Sat · Limited slots</span></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:16px;">
-                <i class="fas fa-users" style="color:#e3342f;font-size:1.4rem;width:30px;"></i>
-                <div><span style="color:#aaa;font-size:0.8rem;display:block;">Who Can Apply</span><span style="color:#fff;font-weight:600;">Senior professionals, entrepreneurs, doctors, business owners &amp; leaders</span></div>
-            </div>
+        <div style="text-align:center;margin:10px 0 20px;">
+            <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-register" style="padding:12px 32px;font-size:1rem;">
+                <i class="fas fa-arrow-right" style="margin-right:8px;"></i> Reserve Your Spot Now – <span class="price-cut">₹2499</span> <span class="price-new">₹49</span>
+            </a>
         </div>
 
-        <!-- ===== CHECKLIST ===== -->
-        <h2>Check All the Boxes If Your Answer Is <span style="color:#e3342f;">YES</span></h2>
-        <p style="color:#cbd5e6;margin-bottom:10px;">Be honest with yourself — this is the first step toward real change.</p>
-        <div class="yes-grid">
-            <div class="yes-item"><input type="checkbox" id="c1"><label for="c1"><i class="fas fa-check-circle"></i> You feel mentally exhausted even after taking breaks or vacations.</label></div>
-            <div class="yes-item"><input type="checkbox" id="c2"><label for="c2"><i class="fas fa-check-circle"></i> Your work pressure is affecting your health, sleep, or relationships.</label></div>
-            <div class="yes-item"><input type="checkbox" id="c3"><label for="c3"><i class="fas fa-check-circle"></i> You constantly overthink and find it difficult to switch off your mind.</label></div>
-            <div class="yes-item"><input type="checkbox" id="c4"><label for="c4"><i class="fas fa-check-circle"></i> You have achieved professional success but still don't feel peaceful or fulfilled.</label></div>
-            <div class="yes-item"><input type="checkbox" id="c5"><label for="c5"><i class="fas fa-check-circle"></i> You have already tried therapy, meditation, self-help books, or other solutions without lasting results.</label></div>
-            <div class="yes-item"><input type="checkbox" id="c6"><label for="c6"><i class="fas fa-check-circle"></i> You want to perform at your highest level without sacrificing your happiness, family, or health.</label></div>
+        <!-- ===== CHECKLIST (8 boxes) ===== -->
+        <h2>✅ This Call Is For You if...</h2>
+        <p style="color:#cbd5e6;margin-bottom:6px;">Check every box that's true for you right now.</p>
+
+        <div class="yes-grid-new">
+            <div class="yes-item-new"><input type="checkbox" id="n1"><label for="n1"><i class="fas fa-check-circle"></i> You feel mentally exhausted even after taking breaks or vacations.</label></div>
+            <div class="yes-item-new"><input type="checkbox" id="n2"><label for="n2"><i class="fas fa-check-circle"></i> Your work pressure is affecting your health, sleep, or relationships.</label></div>
+            <div class="yes-item-new"><input type="checkbox" id="n3"><label for="n3"><i class="fas fa-check-circle"></i> You constantly overthink and find it difficult to switch off your mind.</label></div>
+            <div class="yes-item-new"><input type="checkbox" id="n4"><label for="n4"><i class="fas fa-check-circle"></i> You have achieved professional success but still don't feel peaceful or fulfilled.</label></div>
+            <div class="yes-item-new"><input type="checkbox" id="n5"><label for="n5"><i class="fas fa-check-circle"></i> You have already tried therapy, meditation, or self-help without lasting results.</label></div>
+            <div class="yes-item-new"><input type="checkbox" id="n6"><label for="n6"><i class="fas fa-check-circle"></i> You want to perform at your highest level without sacrificing your happiness or health.</label></div>
+            <div class="yes-item-new"><input type="checkbox" id="n7"><label for="n7"><i class="fas fa-check-circle"></i> You feel disconnected from your family or loved ones because of work pressure.</label></div>
+            <div class="yes-item-new"><input type="checkbox" id="n8"><label for="n8"><i class="fas fa-check-circle"></i> You're secretly worried that your success won't last or that you'll burn out completely.</label></div>
         </div>
-        <div style="background:rgba(227,52,47,0.12);padding:16px 24px;border-radius:14px;border-left:4px solid #e3342f;margin:10px 0 20px;">
-            <p style="font-size:1.05rem;font-weight:600;color:#e2e8f0;margin:0;">
-                <i class="fas fa-exclamation-circle" style="color:#e3342f;margin-right:8px;"></i>
-                If you answered <strong>YES</strong> to even three of these statements, this Executive Clarity Call could become the turning point in your life.
-            </p>
+
+        <div class="filter-note">
+            <i class="fas fa-exclamation-circle" style="color:#e3342f;margin-right:10px;"></i>
+            If you checked <strong>even one</strong>, this call is designed for you. The <strong>₹49</strong> price exists to filter serious people only.
         </div>
 
         <!-- ===== 20 REASONS ===== -->
-        <h2>20 Reasons to Book Your <span class="gradient-sub">Executive Clarity Call</span></h2>
-        <div class="reasons-grid">
-            <!-- Group 1 -->
-            <div class="reason-item"><span class="num">1</span> <span><strong>Discover Root Cause</strong> — Understand why your stress keeps returning.</span></div>
-            <div class="reason-item"><span class="num">2</span> <span><strong>Identify Triggers</strong> — Pinpoint your biggest emotional triggers.</span></div>
-            <div class="reason-item"><span class="num">3</span> <span><strong>Hidden Patterns</strong> — Uncover thinking patterns affecting your decisions.</span></div>
-            <div class="reason-item"><span class="num">4</span> <span><strong>Why Burnout Happens</strong> — Learn why burnout develops even in successful professionals.</span></div>
-            <div class="reason-item"><span class="num">5</span> <span><strong>Real Obstacles</strong> — Gain clarity about the real obstacles preventing lasting peace.</span></div>
-            <!-- Group 2 -->
-            <div class="reason-item"><span class="num">6</span> <span><strong>Improve Focus</strong> — Boost focus and productivity.</span></div>
-            <div class="reason-item"><span class="num">7</span> <span><strong>Better Decisions</strong> — Make better decisions under pressure.</span></div>
-            <div class="reason-item"><span class="num">8</span> <span><strong>Reduce Overthinking</strong> — Stop the mental chatter.</span></div>
-            <div class="reason-item"><span class="num">9</span> <span><strong>Emotional Resilience</strong> — Build resilience during difficult situations.</span></div>
-            <div class="reason-item"><span class="num">10</span> <span><strong>Protect Mental Energy</strong> — Learn how successful leaders protect their mental energy.</span></div>
-            <!-- Group 3 -->
-            <div class="reason-item"><span class="num">11</span> <span><strong>Better Relationships</strong> — Improve communication with spouse and family.</span></div>
-            <div class="reason-item"><span class="num">12</span> <span><strong>Restore Balance</strong> — Restore emotional balance.</span></div>
-            <div class="reason-item"><span class="num">13</span> <span><strong>Improve Sleep</strong> — Improve sleep quality.</span></div>
-            <div class="reason-item"><span class="num">14</span> <span><strong>Healthy Boundaries</strong> — Create healthier work-life boundaries.</span></div>
-            <div class="reason-item"><span class="num">15</span> <span><strong>Confidence &amp; Peace</strong> — Experience greater confidence and inner peace.</span></div>
-            <!-- Group 4 -->
-            <div class="reason-item"><span class="num">16</span> <span><strong>Short-term vs Long-term</strong> — Why most techniques only provide temporary relief.</span></div>
-            <div class="reason-item"><span class="num">17</span> <span><strong>Freedom Wellness Model</strong> — Learn the principles behind the model.</span></div>
-            <div class="reason-item"><span class="num">18</span> <span><strong>Root Cause Healing</strong> — How root cause healing creates lasting change.</span></div>
-            <div class="reason-item"><span class="num">19</span> <span><strong>Personalized Roadmap</strong> — See what your personalized roadmap could look like.</span></div>
-            <div class="reason-item"><span class="num">20</span> <span><strong>Next Steps</strong> — Practical next steps based on your unique situation.</span></div>
+        <h2>🔥 20 Reasons to Book Your <span class="gradient-sub">Executive Clarity Call</span></h2>
+
+        <div class="reasons-grid-4">
+            <div class="reason-group-box">
+                <h4><i class="fas fa-search"></i> Discover the Root Cause</h4>
+                <ul>
+                    <li>Understand why your stress keeps returning</li>
+                    <li>Identify your biggest emotional triggers</li>
+                    <li>Uncover hidden thinking patterns affecting your decisions</li>
+                    <li>Learn why burnout develops in successful professionals</li>
+                    <li>Gain clarity about the real obstacles preventing peace</li>
+                </ul>
+            </div>
+            <div class="reason-group-box">
+                <h4><i class="fas fa-chart-line"></i> Boost Performance</h4>
+                <ul>
+                    <li>Improve focus and productivity</li>
+                    <li>Make better decisions under pressure</li>
+                    <li>Reduce overthinking and mental chatter</li>
+                    <li>Build emotional resilience in difficult situations</li>
+                    <li>Learn how leaders protect their mental energy</li>
+                </ul>
+            </div>
+            <div class="reason-group-box">
+                <h4><i class="fas fa-heart"></i> Build a Better Life</h4>
+                <ul>
+                    <li>Improve communication with spouse and family</li>
+                    <li>Restore emotional balance</li>
+                    <li>Improve sleep quality</li>
+                    <li>Create healthier work-life boundaries</li>
+                    <li>Experience greater confidence and inner peace</li>
+                </ul>
+            </div>
+            <div class="reason-group-box">
+                <h4><i class="fas fa-seedling"></i> Create Lasting Transformation</h4>
+                <ul>
+                    <li>Why most techniques only provide short-term relief</li>
+                    <li>The principles behind the Freedom Wellness Model</li>
+                    <li>How root cause healing creates lasting change</li>
+                    <li>What your personalized roadmap could look like</li>
+                    <li>Practical next steps based on your unique situation</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- ===== WHO & WHAT YOU LEARN ===== -->
-        <h2>Who This Call Is <span style="color:#e3342f;">For</span> &amp; What You'll Learn</h2>
-        <div class="two-col">
-            <div class="col-box">
+        <!-- ===== WHO & WHAT ===== -->
+        <h2>👥 Who This Call Is <span style="color:#e3342f;">For</span> &amp; What You'll Learn</h2>
+
+        <div class="who-what-stack">
+            <div class="who-what-card">
                 <h4><i class="fas fa-user-check"></i> Who This Is For</h4>
                 <ul>
-                    <li>Senior corporate professionals</li>
-                    <li>Directors and Vice Presidents</li>
-                    <li>CXOs and business leaders</li>
-                    <li>Startup founders</li>
-                    <li>Business owners</li>
-                    <li>Doctors and healthcare professionals</li>
-                    <li>Lawyers and consultants</li>
-                    <li>Entrepreneurs</li>
-                    <li>High achievers experiencing chronic stress or burnout</li>
-                    <li>Professionals who feel emotionally exhausted despite external success</li>
+                    <li>Senior corporate professionals, Directors &amp; VPs</li>
+                    <li>CXOs, business leaders &amp; startup founders</li>
+                    <li>Business owners &amp; entrepreneurs</li>
+                    <li>Doctors, lawyers &amp; consultants</li>
+                    <li>High achievers with chronic stress or burnout</li>
+                    <li>Professionals emotionally exhausted despite success</li>
                 </ul>
-                <p style="font-size:0.95rem;color:#aaa;font-style:italic;margin-top:12px;">
-                    <i class="fas fa-info-circle" style="color:#e3342f;"></i> Especially valuable if you've tried counselling, medication, meditation, coaching, vacations, or self-help but still feel something is missing.
-                </p>
+                <div class="note">
+                    <i class="fas fa-info-circle"></i> Especially valuable if you've tried counselling, medication, meditation, or coaching – but still feel stuck.
+                </div>
             </div>
-            <div class="col-box">
+
+            <div class="who-what-card">
                 <h4><i class="fas fa-graduation-cap"></i> What You'll Learn</h4>
                 <ul>
-                    <li>Why managing stress is different from eliminating its root cause.</li>
-                    <li>The hidden emotional patterns affecting your work and relationships.</li>
-                    <li>Why high achievers experience burnout differently.</li>
-                    <li>How your thoughts influence your emotions and decisions.</li>
-                    <li>The importance of emotional awareness in leadership.</li>
-                    <li>Practical techniques to calm your mind.</li>
-                    <li>How to improve communication and relationships.</li>
-                    <li>How to regain confidence and emotional resilience.</li>
-                    <li>The four stages of the Freedom Wellness Model.</li>
-                    <li>Personalized next steps that fit your current situation.</li>
+                    <li>Why managing stress ≠ eliminating root cause</li>
+                    <li>Hidden emotional patterns affecting work &amp; relationships</li>
+                    <li>Why high achievers experience burnout differently</li>
+                    <li>How thoughts influence emotions &amp; decisions</li>
+                    <li>Emotional awareness in leadership</li>
+                    <li>Practical techniques to calm your mind</li>
+                    <li>Improve communication &amp; relationships</li>
+                    <li>Regain confidence &amp; emotional resilience</li>
+                    <li>Four stages of the Freedom Wellness Model</li>
+                    <li>Personalized next steps for your situation</li>
                 </ul>
-            </div>
-        </div>
-
-        <!-- ===== VIDEO SECTION ===== -->
-        <div class="video-headline">🎬 Watch This Before You Book</div>
-        <p class="video-subhead">
-            Discover how Dr. Neeraj helps high-achieving professionals break free from stress,<br />
-            anxiety, and emotional blocks — and create lasting inner peace.
-        </p>
-        <div class="video-container">
-            <!-- Placeholder – replace with actual video embed -->
-            <img src="https://i.ibb.co/gMPSJydf/a98547-470b9a129bc4432ba40ea9a6dc9c2839-mv2.jpg" alt="Video placeholder" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:28px;" />
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:3rem;background:rgba(0,0,0,0.5);padding:20px 30px;border-radius:60px;border:2px solid #e3342f;">
-                <i class="fas fa-play-circle" style="color:#e3342f;"></i>
             </div>
         </div>
 
         <!-- ===== BONUSES ===== -->
         <h2>🎁 Exclusive Bonuses When You Qualify</h2>
         <p style="color:#cbd5e6;margin-bottom:10px;">When you book your Executive Clarity Call and qualify for the Freedom Wellness Model, you'll also receive these exclusive resources.</p>
+
         <div class="bonus-grid">
             <div class="bonus-item">
                 <span class="emoji">📋</span>
@@ -1050,32 +999,22 @@
 
         <!-- ===== MENTOR ===== -->
         <h2>🧠 Meet Your <span style="color:#e3342f;">Mentor</span></h2>
+
         <div class="mentor-wrap">
             <div class="mentor-img">
-                <img src="https://i.ibb.co/gMPSJydf/a98547-470b9a129bc4432ba40ea9a6dc9c2839-mv2.jpg" alt="Dr. Neeraj" />
+                <img src="https://i.ibb.co/gMPSJydf/a98547-470b9a129bc4432ba40ea9a6dc9c2839-mv2.jpg" alt="Dr. Neeraj K Gupta" />
             </div>
             <div class="mentor-info">
-                <h3>Dr. Neeraj</h3>
-                <div class="title">Psychologist · Mental Wellness Expert · Executive Stress &amp; Burnout Specialist</div>
-                <p>
-                    For over two decades, Dr. Neeraj has been helping people overcome emotional struggles that silently affect every area of their lives.
-                </p>
-                <p>
-                    After working with more than 1,000 one-to-one clients and delivering seminars to over 15,000 participants, he realized that most people were only treating symptoms rather than addressing the real cause of their stress.
-                </p>
-                <p>
-                    That realization led him to develop the <strong>Freedom Wellness Model™</strong>, a structured approach that combines psychology, mindfulness, emotional intelligence, practical life skills, and personalized guidance to create lasting transformation.
-                </p>
-                <p style="font-style:italic;color:#e2e8f0;">
-                    <i class="fas fa-quote-left" style="color:#e3342f;margin-right:6px;"></i>
-                    &ldquo;My mission is simple: to help successful people achieve lasting emotional freedom without sacrificing their careers, relationships, health, or peace of mind.&rdquo;
-                </p>
-                <div style="margin:12px 0 6px;">
-                    <span class="cred-badge"><i class="fas fa-star"></i> 20+ Years Experience</span>
-                    <span class="cred-badge"><i class="fas fa-users"></i> 1,000+ Clients</span>
-                    <span class="cred-badge"><i class="fas fa-trophy"></i> 15,000+ Seminar Participants</span>
-                    <span class="cred-badge"><i class="fas fa-check-circle"></i> Personalized Approach</span>
+                <h3>Dr. Neeraj K Gupta</h3>
+                <div class="title">Psychologist · Executive Stress &amp; Burnout Specialist</div>
+                <div style="margin-bottom:8px;">
+                    <span class="cred-badge"><i class="fas fa-star"></i> 25+ Years Experience</span>
+                    <span class="cred-badge"><i class="fas fa-users"></i> 5,000+ Lives Transformed</span>
+                    <span class="cred-badge"><i class="fas fa-trophy"></i> 15,000+ Seminar Attendees</span>
                 </div>
+                <p class="bio-short">
+                    Dr. Neeraj K Gupta has been helping people overcome emotional struggles for over two decades. After working with more than 1,000 one-to-one clients and delivering seminars to over 15,000 participants, he realized that most people were only treating symptoms rather than addressing the real cause of their stress. This led him to develop the <strong>Freedom Wellness Model™</strong> – a structured approach combining psychology, mindfulness, emotional intelligence, and personalized guidance to create lasting transformation.
+                </p>
             </div>
         </div>
 
@@ -1084,7 +1023,7 @@
         <div class="reviews-grid">
             <div class="review-card">
                 <div class="stars">★★★★★</div>
-                <div class="review-text">"I had everything professionally, but internally I felt exhausted every day. After working with Dr. Neeraj, I finally understood the root cause of my stress. My relationships improved, my confidence returned, and I now enjoy both my work and my personal life."</div>
+                <div class="review-text">"I had everything professionally, but internally I felt exhausted every day. After working with Dr. Neeraj K Gupta, I finally understood the root cause of my stress. My relationships improved, my confidence returned, and I now enjoy both my work and my personal life."</div>
                 <div class="review-author">Corporate Professional</div>
             </div>
             <div class="review-card">
@@ -1117,6 +1056,7 @@
         <!-- ===== WHY MODEL IS DIFFERENT ===== -->
         <h2>Why the <span class="gradient-sub">Freedom Wellness Model</span> Is Different</h2>
         <p style="color:#cbd5e6;">Most approaches focus on helping you manage stress. The Freedom Wellness Model helps you understand why the stress exists in the first place.</p>
+
         <div class="comparison-grid">
             <div class="compare-box pain">
                 <h3>Traditional Approaches</h3>
@@ -1164,8 +1104,8 @@
                 <div class="faq-answer"><p>Approximately 45 to 60 minutes.</p></div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Is this really free? <span class="icon">+</span></div>
-                <div class="faq-answer"><p>Yes. However, because Dr. Neeraj personally conducts every session, only a limited number of qualified applicants are accepted each week.</p></div>
+                <div class="faq-question">Is this really ₹49? <span class="icon">+</span></div>
+                <div class="faq-answer"><p>Yes. The regular price is ₹2499, but you get it for just ₹49 as an introductory offer. However, because Dr. Neeraj K Gupta personally conducts every session, only a limited number of qualified applicants are accepted each week.</p></div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Will I be pressured to buy anything? <span class="icon">+</span></div>
@@ -1195,7 +1135,7 @@
                     <i class="fas fa-exclamation-triangle" style="margin-right:8px;"></i> LIMITED AVAILABILITY
                 </p>
                 <p style="color:#cbd5e6;font-size:0.95rem;">
-                    Because every Executive Clarity Call is personally conducted by Dr. Neeraj, only a small number of applications are accepted each week. Once all appointments are booked, registration will close until new slots become available.
+                    Because every Executive Clarity Call is personally conducted by <strong>Dr. Neeraj K Gupta</strong>, only a small number of applications are accepted each week. Once all appointments are booked, registration will close until new slots become available.
                 </p>
                 <p style="color:#e2e8f0;font-weight:600;margin-top:8px;">
                     If improving your mental well-being, relationships, and quality of life is important to you, this is the right time to apply.
@@ -1206,8 +1146,8 @@
                 <p style="color:#cbd5e6;font-size:1rem;">
                     Discover the hidden causes behind your stress. Receive a personalized roadmap for lasting emotional well-being. Learn whether the Freedom Wellness Model is the right solution for your situation.
                 </p>
-                <a href="#" class="btn-register" style="margin-top:16px;display:inline-block;padding:16px 50px;font-size:1.2rem;">
-                    <i class="fas fa-arrow-right" style="margin-right:10px;"></i> APPLY NOW
+                <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-register" style="margin-top:16px;display:inline-block;padding:16px 50px;font-size:1.2rem;">
+                    <i class="fas fa-arrow-right" style="margin-right:10px;"></i> APPLY NOW – <span class="price-cut">₹2499</span> <span class="price-new">₹49</span>
                 </a>
                 <p style="color:#888;font-size:0.85rem;margin-top:10px;">
                     <i class="fas fa-lock" style="color:#e3342f;"></i> Your future deserves more than temporary relief. It deserves lasting freedom.
@@ -1217,19 +1157,8 @@
 
         <!-- ===== FOOTER ===== -->
         <footer class="main-footer">
-            <div class="footer-content">
-                <div class="footer-address">
-                    <h4>📍 Visit Us</h4>
-                    <p>200 A/D, 1st Floor, Left Lane of Panch Mandir,<br />Gandhi Nagar, Jammu, J&K 180004</p>
-                </div>
-                <div class="footer-address">
-                    <h4>🔗 Connect</h4>
-                    <p><a href="#" style="color:#e3342f;text-decoration:none;">Instagram</a> • <a href="#" style="color:#e3342f;text-decoration:none;">Facebook</a> • <a href="#" style="color:#e3342f;text-decoration:none;">Website</a></p>
-                    <p><a href="#" style="color:#e3342f;text-decoration:none;">YouTube</a></p>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>© 2026 Dr. Neeraj Wellness — All rights reserved</p>
+                <p>© 2026 <strong>Dr. Neeraj K Gupta</strong> — All rights reserved</p>
             </div>
         </footer>
 
@@ -1238,7 +1167,9 @@
 
     <!-- ===== STICKY BOTTOM CTA ===== -->
     <div class="sticky-cta">
-        <a href="#apply" class="btn-sticky"><i class="fas fa-calendar-check" style="margin-right:8px;"></i> Book Your Free Executive Clarity Call</a>
+        <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-sticky">
+            <i class="fas fa-calendar-check" style="margin-right:8px;"></i> Book Your Call – <span class="price-cut" style="color:#aaa;font-size:0.8rem;">₹2499</span> <span style="color:#25D366;font-weight:700;">₹49</span>
+        </a>
     </div>
 
     <!-- ===== FAQ SCRIPT ===== -->
@@ -1249,7 +1180,6 @@
             });
         });
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const target = document.querySelector(this.getAttribute('href'));
