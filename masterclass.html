@@ -1003,6 +1003,124 @@
                 padding: 12px 16px;
             }
         }
+
+        /* ===== NEW FINAL SECTION STYLES ===== */
+        .final-cta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin: 20px 0 10px;
+        }
+        .final-cta-grid .left-col {
+            text-align: left;
+        }
+        .final-cta-grid .left-col h3 {
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            color: #fff;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .final-cta-grid .left-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .final-cta-grid .left-col ul li {
+            padding-left: 32px;
+            margin-bottom: 14px;
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+            color: #cbd5e6;
+            position: relative;
+        }
+        .final-cta-grid .left-col ul li::before {
+            content: "✓";
+            color: #25D366;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        .final-cta-grid .right-col {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 28px;
+            padding: 32px 28px;
+            border: 1px solid rgba(227, 52, 47, 0.3);
+            backdrop-filter: blur(4px);
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+        .final-cta-grid .right-col .offer-badge {
+            display: inline-block;
+            background: #e3342f;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .final-cta-grid .right-col .price-block {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 12px 0 6px;
+        }
+        .final-cta-grid .right-col .price-block .small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #aaa;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+        .final-cta-grid .right-col .price-block .highlight {
+            color: #25D366;
+        }
+        .final-cta-grid .right-col .sub-text {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .final-cta-grid .right-col .guarantee {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: #cbd5e6;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 16px;
+        }
+        .final-cta-grid .right-col .guarantee i {
+            color: #FFD700;
+            margin-right: 6px;
+        }
+        .final-cta-grid .right-col .btn-register {
+            margin: 0;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            animation: softPulse 3s ease-in-out infinite;
+        }
+
+        @media (max-width: 700px) {
+            .final-cta-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .final-cta-grid .left-col {
+                text-align: center;
+            }
+            .final-cta-grid .left-col ul li {
+                padding-left: 0;
+                list-style: none;
+            }
+            .final-cta-grid .left-col ul li::before {
+                display: none;
+            }
+            .final-cta-grid .left-col ul li {
+                padding-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1406,30 +1524,65 @@
                 </div>
             </section>
 
-            <!-- ===== FINAL CTA - Black Background ===== -->
+            <!-- ===== FINAL CTA - REVISED & IMPROVED ===== -->
             <section id="apply" class="bg-dark" style="text-align:center;border-radius:0;margin:0;padding:44px 48px;">
 
-                <h2 data-aos="fade-up" data-aos-duration="800" style="border-left:none;padding-left:0;margin:0 0 12px;font-size:clamp(1.8rem, 4vw, 2.2rem);">Your Next <span class="gradient-sub">Decision</span></h2>
-                <p style="font-size:clamp(1rem, 1.2vw, 1.1rem);color:#cbd5e6;max-width:700px;margin:0 auto 24px;">
-                    Imagine where you could be just 90 days from today. Waking up with a calmer mind. Feeling emotionally stronger. Leading with confidence. Sleeping peacefully. Building healthier relationships. Enjoying your success instead of constantly worrying about it.
-                </p>
-                <p style="font-weight:700;font-size:1.15rem;color:#f5f0e8;">
-                    That future begins with one conversation. <strong style="color:#e3342f;">Today.</strong>
-                </p>
-                <div style="background:rgba(227,52,47,0.08);border-radius:16px;padding:20px 24px;max-width:650px;margin:20px auto;border:1px solid rgba(227,52,47,0.2);">
-                    <p style="color:#e3342f;font-weight:700;font-size:1rem;"><i class="fas fa-exclamation-triangle" style="margin-right:8px;"></i> LIMITED AVAILABILITY</p>
-                    <p style="color:#cbd5e6;font-size:0.95rem;">Because every Executive Clarity Call is personally conducted by <strong>Dr. Neeraj K Gupta</strong>, only a small number of applications are accepted each week. Once all appointments are booked, registration will close until new slots become available.</p>
-                    <p style="color:#e2e8f0;font-weight:600;margin-top:8px;">If improving your mental well-being, relationships, and quality of life is important to you, this is the right time to apply.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800" style="border-left:none;padding-left:0;margin:0 0 12px;font-size:clamp(1.8rem, 4vw, 2.2rem);">
+                    The <span class="gradient-sub">Freedom</span> You Deserve<br>
+                    <span style="font-size:0.7em;color:#cbd5e6;font-weight:400;">Starts with a Single Decision</span>
+                </h2>
+
+                <div class="final-cta-grid">
+                    <!-- Left column: compelling benefits -->
+                    <div class="left-col" data-aos="fade-right" data-aos-duration="700">
+                        <h3>What You’ll Walk Away With:</h3>
+                        <ul>
+                            <li><strong>Clarity</strong> – Understand the real, hidden cause of your chronic stress and burnout.</li>
+                            <li><strong>A Personalized Roadmap</strong> – A step‑by‑step plan tailored to your life, career, and relationships.</li>
+                            <li><strong>Practical Tools</strong> – Actionable strategies to calm your mind, improve sleep, and regain focus – starting today.</li>
+                            <li><strong>Confidence</strong> – Know exactly what’s holding you back and how to break through for good.</li>
+                            <li><strong>Peace of Mind</strong> – Feel in control of your emotions and your future, without sacrificing your success.</li>
+                        </ul>
+                        <p style="color:#e2e8f0;font-weight:600;margin-top:12px;">
+                            <i class="fas fa-check-circle" style="color:#25D366;"></i> No pressure. No obligation. Just honest, expert guidance.
+                        </p>
+                    </div>
+
+                    <!-- Right column: offer card -->
+                    <div class="right-col" data-aos="fade-left" data-aos-duration="700">
+                        <div class="offer-badge">⏳ Limited Spots Available</div>
+                        <div style="font-size:1.2rem;font-weight:600;color:#e3342f;margin-bottom:2px;">1:1 Executive Clarity Call</div>
+                        <div class="price-block">
+                            <span class="small">₹2499</span>
+                            <span class="highlight">₹49</span>
+                        </div>
+                        <div class="sub-text">with Dr. Neeraj K Gupta – personally conducted</div>
+
+                        <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-register" style="display:block;width:100%;box-sizing:border-box;padding:14px 20px;font-size:clamp(1rem,1.1vw,1.1rem);" onclick="fbq('track', 'Lead', {content_name: 'Clarity Call - Final CTA'});">
+                            <i class="fas fa-calendar-check" style="margin-right:8px;"></i> Claim Your Spot Now
+                        </a>
+
+                        <div class="guarantee">
+                            <i class="fas fa-shield-alt"></i> 100% Satisfaction Guarantee – if you don’t gain massive clarity, we’ll refund your ₹49.
+                        </div>
+                        <p style="font-size:0.8rem;color:#888;margin-top:12px;">
+                            <i class="fas fa-lock" style="color:#e3342f;"></i> Your data is secure. No spam. Ever.
+                        </p>
+                    </div>
                 </div>
-                <div style="background:rgba(227,52,47,0.12);border-radius:16px;padding:28px 24px;max-width:720px;margin:20px auto;border:2px solid rgba(227,52,47,0.3);">
-                    <h3 data-aos="zoom-in" data-aos-delay="250" style="font-size:clamp(1.3rem, 2.5vw, 1.6rem);color:#fff;margin-bottom:6px;">BOOK YOUR EXECUTIVE CLARITY CALL TODAY</h3>
-                    <p style="color:#cbd5e6;font-size:1rem;">Discover the hidden causes behind your stress. Receive a personalized roadmap for lasting emotional well-being. Learn whether the Freedom Wellness Model is the right solution for your situation.</p>
-                    <!-- Single CTA in Final CTA (Only APPLY NOW) -->
-                    <a href="https://pages.razorpay.com/masterclass-drneeraj" target="_blank" class="btn-register" style="margin-top:16px;display:inline-block;padding:16px 40px;font-size:clamp(1rem, 1.3vw, 1.2rem);" onclick="fbq('track', 'Lead', {content_name: 'Clarity Call - Final CTA'});">
-                        <i class="fas fa-arrow-right" style="margin-right:10px;"></i> APPLY NOW – <span class="price-cut">₹2499</span> <span class="price-new">₹49</span>
-                    </a>
-                    <p style="color:#888;font-size:0.85rem;margin-top:10px;"><i class="fas fa-lock" style="color:#e3342f;"></i> Your future deserves more than temporary relief. It deserves lasting freedom.</p>
+
+                <!-- Additional urgency / social proof below the grid -->
+                <div style="margin-top:24px;padding:16px 20px;background:rgba(227,52,47,0.08);border-radius:16px;border:1px solid rgba(227,52,47,0.25);max-width:800px;margin-left:auto;margin-right:auto;">
+                    <p style="font-size:0.95rem;color:#cbd5e6;margin:0;">
+                        <i class="fas fa-users" style="color:#e3342f;margin-right:6px;"></i>
+                        <strong>Over 5,000 professionals</strong> have already transformed their lives using the Freedom Wellness Model. 
+                        <span style="color:#e3342f;font-weight:600;">Will you be next?</span>
+                    </p>
+                    <p style="font-size:0.85rem;color:#888;margin-top:6px;">
+                        <i class="fas fa-clock" style="color:#e3342f;"></i> Only <strong>7 spots</strong> remain for this week. Don’t wait – your future self will thank you.
+                    </p>
                 </div>
+
             </section>
 
         </main>
