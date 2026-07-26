@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and Conditions · Dr Neeraj Wellness</title>
+
+    <!-- Google Fonts for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ----- Reset & Base ----- */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8faff;
+            color: #1a1e2b;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(0, 20, 40, 0.06), 0 8px 24px rgba(0, 0, 0, 0.02);
+            padding: 3rem 2.5rem;
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+            .container {
+                padding: 1.75rem 1.25rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* ----- Header / Brand ----- */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #f0f4fe;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .brand-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: #0b2d4b;
+            color: #ffffff;
+            border-radius: 14px;
+            font-size: 1.4rem;
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+            color: #0b2d4b;
+        }
+
+        .brand-name span {
+            font-weight: 400;
+            color: #4b6a8b;
+        }
+
+        .badge {
+            background: #eef5ff;
+            color: #1a4b7a;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            border: 1px solid #d6e4f5;
+        }
+
+        /* ----- Typography ----- */
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0a1e30;
+            margin-bottom: 0.2rem;
+        }
+
+        .last-updated {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #5e6f88;
+            background: #f2f6fc;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            margin-bottom: 2rem;
+        }
+
+        .last-updated i {
+            margin-right: 0.4rem;
+            color: #2d6a9f;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0a1e30;
+            margin-top: 2.6rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        h2 i {
+            color: #2d6a9f;
+            font-size: 1.2rem;
+            width: 1.8rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #1a324a;
+            margin-top: 1.8rem;
+            margin-bottom: 0.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #242b3a;
+        }
+
+        ul,
+        ol {
+            margin: 0.6rem 0 1.2rem 1.8rem;
+            color: #242b3a;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        strong {
+            color: #0a1e30;
+            font-weight: 600;
+        }
+
+        a {
+            color: #1a5a9c;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #1a5a9c;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #edf2f9;
+            margin: 2.4rem 0 1.6rem 0;
+        }
+
+        /* ----- Definition blocks (dt/dd) ----- */
+        .def-block {
+            background: #f7faff;
+            border-radius: 16px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.2rem 0 1.8rem 0;
+            border-left: 4px solid #2d6a9f;
+        }
+
+        .def-block dt {
+            font-weight: 700;
+            color: #0a1e30;
+            margin-top: 0.6rem;
+        }
+
+        .def-block dt:first-of-type {
+            margin-top: 0;
+        }
+
+        .def-block dd {
+            margin-left: 1.2rem;
+            margin-bottom: 0.6rem;
+            color: #2c3b4f;
+        }
+
+        /* ----- Highlight / callout boxes ----- */
+        .callout {
+            background: #f3f8ff;
+            border-radius: 14px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.6rem 0;
+            border: 1px solid #e0ecfe;
+        }
+
+        .callout i {
+            color: #1a5a9c;
+            margin-right: 0.5rem;
+        }
+
+        .callout strong {
+            color: #0b2d4b;
+        }
+
+        /* ----- Contact section ----- */
+        .contact-box {
+            background: #eef4fc;
+            border-radius: 16px;
+            padding: 1.6rem 2rem;
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.2rem 2rem;
+            border: 1px solid #d6e4f5;
+        }
+
+        .contact-box .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 500;
+            color: #0a1e30;
+        }
+
+        .contact-box .contact-item i {
+            color: #1a5a9c;
+            font-size: 1.1rem;
+            width: 1.6rem;
+            text-align: center;
+        }
+
+        .contact-box .contact-item a {
+            font-weight: 500;
+            border-bottom: none;
+        }
+
+        .contact-box .contact-item a:hover {
+            border-bottom: 1px solid #1a5a9c;
+        }
+
+        /* ----- Footer note ----- */
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 2px solid #edf2f9;
+            font-size: 0.85rem;
+            color: #5e6f88;
+            text-align: center;
+        }
+
+        .footer-note i {
+            color: #2d6a9f;
+        }
+
+        /* ----- Responsive tweaks ----- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 2rem;
+            }
+            .def-block {
+                padding: 1rem 1.2rem;
+            }
+            .contact-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem 1.4rem;
+            }
+            .badge {
+                font-size: 0.6rem;
+                padding: 0.2rem 0.8rem;
+            }
+            .brand-name {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .container {
+                padding: 1.25rem 1rem;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Scrollable smooth */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Print-friendly */
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0.2in;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+            }
+            .badge {
+                border: 1px solid #ccc;
+                background: #f5f5f5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="brand">
+                <span class="brand-icon"><i class="fas fa-leaf"></i></span>
+                <span class="brand-name">Dr Neeraj <span>Wellness</span></span>
+            </div>
+            <span class="badge"><i class="fas fa-file-contract" style="margin-right:0.4rem;"></i> Terms &amp; Conditions</span>
+        </header>
+
+        <!-- TITLE -->
+        <h1>Terms and Conditions</h1>
+        <span class="last-updated"><i class="fas fa-calendar-alt"></i> Last updated: July 26, 2026</span>
+
+        <p style="margin-top:0.8rem; font-size:1.05rem;">
+            Please read these terms and conditions carefully before using Our Service.
+        </p>
+
+        <hr />
+
+        <!-- INTERPRETATION & DEFINITIONS -->
+        <h2><i class="fas fa-gavel"></i> Interpretation and Definitions</h2>
+
+        <h3>Interpretation</h3>
+        <p>
+            The words whose initial letters are capitalized have meanings defined under the following conditions.
+            The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+        </p>
+
+        <h3>Definitions</h3>
+        <p>For the purposes of these Terms and Conditions:</p>
+
+        <dl class="def-block">
+            <dt><strong>Affiliate</strong></dt>
+            <dd>means an entity that controls, is controlled by, or is under common control with a party, where &ldquo;control&rdquo; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</dd>
+
+            <dt><strong>Country</strong></dt>
+            <dd>refers to: <strong>Jammu and Kashmir, India</strong></dd>
+
+            <dt><strong>Company</strong> (referred to as either &ldquo;the Company&rdquo;, &ldquo;We&rdquo;, &ldquo;Us&rdquo; or &ldquo;Our&rdquo; in these Terms and Conditions)</dt>
+            <dd>refers to <strong>Dr Neeraj Wellness</strong>.</dd>
+
+            <dt><strong>Device</strong></dt>
+            <dd>means any device that can access the Service such as a computer, a cell phone or a digital tablet.</dd>
+
+            <dt><strong>Service</strong></dt>
+            <dd>refers to the Website.</dd>
+
+            <dt><strong>Terms and Conditions</strong> (also referred to as &ldquo;Terms&rdquo;)</dt>
+            <dd>means these Terms and Conditions, including any documents expressly incorporated by reference, which govern Your access to and use of the Service and form the entire agreement between You and the Company regarding the Service. These Terms and Conditions have been created with the help of the TermsFeed Terms and Conditions Generator.</dd>
+
+            <dt><strong>Third-Party Social Media Service</strong></dt>
+            <dd>means any services or content (including data, information, products or services) provided by a third party that is displayed, included, made available, or linked to through the Service.</dd>
+
+            <dt><strong>Website</strong></dt>
+            <dd>refers to Dr Neeraj Wellness, accessible from <a href="https://drneerajkgupta.in" target="_blank" rel="noopener">https://drneerajkgupta.in</a></dd>
+
+            <dt><strong>You</strong></dt>
+            <dd>means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</dd>
+        </dl>
+
+        <hr />
+
+        <!-- ACKNOWLEDGMENT -->
+        <h2><i class="fas fa-check-circle"></i> Acknowledgment</h2>
+        <p>
+            These are the Terms and Conditions governing the use of this Service and the agreement between You and the Company.
+            These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+        </p>
+        <p>
+            Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions.
+            These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+        </p>
+        <p>
+            By accessing or using the Service You agree to be bound by these Terms and Conditions.
+            If You disagree with any part of these Terms and Conditions then You may not access the Service.
+        </p>
+        <div class="callout">
+            <i class="fas fa-user-check"></i>
+            <strong>Age restriction:</strong> You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.
+        </div>
+        <p>
+            Your access to and use of the Service is also subject to Our Privacy Policy, which describes how We collect, use, and disclose personal information.
+            Please read Our Privacy Policy carefully before using Our Service.
+        </p>
+
+        <hr />
+
+        <!-- LINKS TO OTHER WEBSITES -->
+        <h2><i class="fas fa-link"></i> Links to Other Websites</h2>
+        <p>
+            Our Service may contain links to third-party websites or services that are not owned or controlled by the Company.
+        </p>
+        <p>
+            The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
+            You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such websites or services.
+        </p>
+        <p>
+            We strongly advise You to read the terms and conditions and privacy policies of any third-party websites or services that You visit.
+        </p>
+
+        <hr />
+
+        <!-- LINKS FROM A THIRD-PARTY SOCIAL MEDIA SERVICE -->
+        <h2><i class="fas fa-share-alt"></i> Links from a Third-Party Social Media Service</h2>
+        <p>
+            The Service may display, include, make available, or link to content or services provided by a Third-Party Social Media Service.
+            A Third-Party Social Media Service is not owned or controlled by the Company, and the Company does not endorse or assume responsibility for any Third-Party Social Media Service.
+        </p>
+        <p>
+            You acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with Your access to or use of any Third-Party Social Media Service, including any content, goods, or services made available through them.
+            Your use of any Third-Party Social Media Service is governed by that Third-Party Social Media Service's terms and privacy policies.
+        </p>
+
+        <hr />
+
+        <!-- TERMINATION -->
+        <h2><i class="fas fa-ban"></i> Termination</h2>
+        <p>
+            We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
+        </p>
+        <p>
+            Upon termination, Your right to use the Service will cease immediately.
+        </p>
+
+        <hr />
+
+        <!-- LIMITATION OF LIABILITY -->
+        <h2><i class="fas fa-shield-alt"></i> Limitation of Liability</h2>
+        <p>
+            Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+        </p>
+        <p>
+            To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of these Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+        </p>
+        <div class="callout">
+            <i class="fas fa-balance-scale"></i>
+            Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply.
+            In these states, each party's liability will be limited to the greatest extent permitted by law.
+        </div>
+
+        <hr />
+
+        <!-- "AS IS" AND "AS AVAILABLE" DISCLAIMER -->
+        <h2><i class="fas fa-exclamation-triangle"></i> &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo; Disclaimer</h2>
+        <p>
+            The Service is provided to You &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo; and with all faults and defects without warranty of any kind.
+            To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice.
+            Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+        </p>
+        <p>
+            Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+        </p>
+        <div class="callout">
+            <i class="fas fa-info-circle"></i>
+            Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You.
+            But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
+        </div>
+
+        <hr />
+
+        <!-- GOVERNING LAW -->
+        <h2><i class="fas fa-gavel"></i> Governing Law</h2>
+        <p>
+            The laws of the Country, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service.
+            Your use of the Application may also be subject to other local, state, national, or international laws.
+        </p>
+
+        <hr />
+
+        <!-- DISPUTES RESOLUTION -->
+        <h2><i class="fas fa-handshake"></i> Disputes Resolution</h2>
+        <p>
+            If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+        </p>
+
+        <hr />
+
+        <!-- EUROPEAN UNION USERS -->
+        <h2><i class="fas fa-euro-sign"></i> For European Union (EU) Users</h2>
+        <p>
+            If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.
+        </p>
+
+        <hr />
+
+        <!-- UNITED STATES LEGAL COMPLIANCE -->
+        <h2><i class="fas fa-flag-usa"></i> United States Legal Compliance</h2>
+        <p>
+            You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a &ldquo;terrorist supporting&rdquo; country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
+        </p>
+
+        <hr />
+
+        <!-- SEVERABILITY AND WAIVER -->
+        <h2><i class="fas fa-columns"></i> Severability and Waiver</h2>
+
+        <h3>Severability</h3>
+        <p>
+            If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+        </p>
+
+        <h3>Waiver</h3>
+        <p>
+            Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not affect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
+        </p>
+
+        <hr />
+
+        <!-- TRANSLATION INTERPRETATION -->
+        <h2><i class="fas fa-language"></i> Translation Interpretation</h2>
+        <p>
+            These Terms and Conditions may have been translated if We have made them available to You on our Service.
+            You agree that the original English text shall prevail in the case of a dispute.
+        </p>
+
+        <hr />
+
+        <!-- CHANGES TO THESE TERMS -->
+        <h2><i class="fas fa-pen"></i> Changes to These Terms and Conditions</h2>
+        <p>
+            We reserve the right, at Our sole discretion, to modify or replace these Terms at any time.
+            If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.
+            What constitutes a material change will be determined at Our sole discretion.
+        </p>
+        <p>
+            By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms.
+            If You do not agree to the new terms, in whole or in part, please stop using the Service.
+        </p>
+
+        <hr />
+
+        <!-- CONTACT -->
+        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+        <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
+
+        <div class="contact-box">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:drneerajgupta1@gmail.com">drneerajgupta1@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <a href="https://drneerajkgupta.in" target="_blank" rel="noopener">drneerajkgupta.in</a>
+            </div>
+            <div style="font-size:0.85rem; color:#4b6a8b; margin-left:auto;">
+                <i class="fas fa-file-signature"></i> Generated using Free Privacy Policy Generator
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-note">
+            <i class="fas fa-leaf" style="margin-right:0.4rem;"></i>
+            Dr Neeraj Wellness &bull; Terms and Conditions &bull; July 2026
+        </div>
+
+    </div>
+
+</body>
+</html>
